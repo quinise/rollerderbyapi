@@ -1,0 +1,15 @@
+
+.intro {
+    height: 100%;
+}
+
+.introduction-img {
+    display: block;
+    object-fit: contain;
+    height:100%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+}

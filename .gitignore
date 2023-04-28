@@ -1,0 +1,6 @@
+node_modules/
+*.sketch
+*.pdf
+*.env
+*.rtf
+*.rtfd

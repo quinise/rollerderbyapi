@@ -1,0 +1,70 @@
+
+[
+    {
+        "modern-banked-track": {
+            "governing-body": "Roller Derby Coalition of Leagues",
+            "governing-body-inception": "2005"
+        },
+        "junior-roller-derby": {
+            "governing-body": "Junior Roller Derby Association",
+            "governing-body-inception": "2009"
+        },
+        "flat-track": {
+            "governing-body": "Women's Flat Track Derby Association",
+            "governing-body-inception": "2011",
+            "divisions": ["WFTDA Division 1", "WFTDA Division 2", "WFTDA Division 3"]
+        },
+        "officials": {
+            "types": ["skating (referee)", "non-skating official"],
+            "program-certifications": {
+                "Level-1": "Other/Regulation Play",
+                "Level-2": "Regulation/Sactioned Play",
+                "Level-3": "Sanctioned/Playoffs/Championships Play"
+            },
+            "referees": {
+                "head-referee": { 
+                    "amount": "1",
+                    "role": "One Referee will be designated the Head Referee. The Head Referee is the ultimate authority of the game."
+                },
+                "pack-referee": {
+                    "amount": "up to 5",
+                    "role": "Pack referees are responsible for watching the skaters in the pack, assessing pack definition, and calling penalties. They are located both inside and outside the track."
+                },
+                "jammer-referee": {
+                    "amount": "2",
+                    "role": "A jammer referee watches the jammer of a designated team, awards points scored by their jammer,[1]: 36  signals whether their jammer has achieved lead jammer status,[17]: 29  and signals the end of the jam if their jammer is lead and calls off the jam."
+                }
+            },
+            "non-skating-officials": {
+                "scorekeepers": {
+                    "amount": "2",
+                    "role": "Record points scored by jammers, as indicated by the Jammer Referees."
+                },
+                "penalty-trackers": {
+                    "amount": "1 (minimum)",
+                    "role": "Record each skater's penalties[1]: 36  and notify the head referee of skaters in the current jam who are in danger of fouling out."
+                },
+                "penalty-box-manager": {
+                    "amount": "1",
+                    "role": "The penalty box manager can call penalties for penalty box violations or illegal procedures.  The manager points where players are assigned to sit, times the jammers"
+                },
+                "penalty-box-timer": {
+                    "amount": "2 (minimum)",
+                    "role": "Ensure skaters sent to the penalty box serve their entire penalties."
+                },
+                "jam-timer": {
+                    "amount": "1",
+                    "role": "Start jams, signal when a jam runs to the full two minutes, time the 30 seconds between jams, and call official timeouts."
+                },
+                "lineup-tracker": {
+                    "amount": "2",
+                    "role": "Record the role (Jammer, Pivot, or Blocker) of every player on the track in each jam."
+                },
+                "scoreboard-operator": {
+                    "amount": "1",
+                    "role": "Update the scoreboard after every scoring pass"
+                }
+            }
+        }
+    }
+]
