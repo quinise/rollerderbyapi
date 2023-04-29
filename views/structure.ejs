@@ -16,7 +16,8 @@
 </head>
 <body>
   <%- include('partials/nav') %>
-  <h1>League Structure Endpoint</h1>
+  <h1>League Structure</h1>
+  <h1>Endpoint</h1>
   <div class="code-container">
     <ul class="nav nav-tabs">
       <li class="nav-item">
@@ -26,96 +27,82 @@
     <div class="code-sample">
       <pre>
         <code>
-            [
-              {
-                "description": string,
-                "game-parameters-and-safety": {
-                  "timing": {
-                    "game-duration": string,
-                    "jam-duration": string
-                  },
-                  "teams": {
-                    "team": string,
-                    "skater": string
-                  },
-                  "timeouts": {
-                    "team-timeouts": string,
-                    "official-reviews": string,
-                    "official-timeouts": string
-                  },
-                  "game-information": string
+          [
+            {
+              "modern-banked-track": {
+                "governing-body": string,
+                "governing-body-inception": string,
+                "founding-leagues": [string]
+              },
+              "flat-track": {
+                "junior-derby": {
+                  "governing-body": string,
+                  "governing-body-inception": string
                 },
-                "gameplay": {
-                  "track": string
-                  "positions": {
-                    "definition": string,
-                    "jammer": string,
-                    "lead-jammer": string,
-                    "pivot-blocker": string,
-                    "blockers": string
+                "womens-derby": {
+                  "governing-body": string,
+                  "governing-body-inception": string,
+                  "divisions": [string]
+                },
+                "mens-derby": {
+                  "governing-body": string,
+                  "governing-body-inception": string
+                }
+              },
+              "officials": {
+                "types": [string],
+                "program-certifications": {
+                  "Level-1": string,
+                  "Level-2": string,
+                  "Level-3": string
+                },
+                "referees": {
+                  "head-referee": {
+                    "amount": string,
+                    "role": string
                   },
-                  "engagement-zome-and-pack": string,
-                  "blocks-and-assists": {
-                    "blocking": string,
-                    "target-zones": string,
-                    "blocking-zones": string
+                  "pack-referee": {
+                    "amount": string,
+                    "role": string
                   },
-                  "passing": {
-                    "definition": string,
-                    "jammers": string
+                  "jammer-referee": {
+                    "amount": string,
+                    "role": string
                   }
                 },
-                "scoring": {
-                  "earning-points": string,
-                  "scoring-avoidance": string,
-                  "penalized-jammers": string
-                },
-                "penalties": {
-                  "definition": string,
-                  "contact-penalties": {
-                    "definition": string,
-                    "star-passes": string
+                "non-skating-officials": {
+                  "scorekeepers": {
+                    "amount": string,
+                    "role": string
                   },
-                  "illegal-target-zone": [string],
-                  "presenting-target-zone": string,
-                  "impact-with-illegal-blocking-zone": string,
-                  "other-illegal-contact": string,
-                  "multiplayer-blocks": string,
-                  "game-structure-penalties": {
-                    "definition": string,
-                    "illegal-positioning": string",
-                    "gaining-position": {
-                      "definition": string
-                    },
-                    "interfering-with-game": string,
-                    "other-illegal-procedures": string
+                  "penalty-trackers": {
+                    "amount": string,
+                    "role": string
                   },
-                  "misconduct": string,
-                  "enforcing-penalties": {
-                    "definition": string,
-                    "penalty-enforcement-blocker": {
-                      "definition": string,
-                      "seat-unavailable": string
-                    },
-                    "penalty-enforcement-jammer": string
+                  "penalty-box-manager": {
+                    "amount": string",
+                    "role": string
                   },
-                  "fouling-out-expulsions": {
-                    "fouling-out": string,
-                    "expulsion": string
+                  "penalty-box-timer": {
+                    "amount": string,
+                    "role": string
+                  },
+                  "jam-timer": {
+                    "amount": string,
+                    "role": string
+                  },
+                  "lineup-tracker": {
+                    "amount": string,
+                    "role": string
+                  },
+                  "scoreboard-operator": {
+                    "amount": string,
+                    "role": string
                   }
-                },
-                "Officiating": {
-                  "distinction": string,
-                  "requirements": string,
-                  "duties": string,
-                  "skater-official-communication": string
-                },
-                "gear": {
-                  "basic": [string],
-                  "advanced": [string]
                 }
               }
-            ]
+            }
+          ]
           </code> 
       </pre>
     </div>

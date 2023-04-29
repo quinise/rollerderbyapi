@@ -3,16 +3,24 @@
     {
         "modern-banked-track": {
             "governing-body": "Roller Derby Coalition of Leagues",
-            "governing-body-inception": "2005"
-        },
-        "junior-roller-derby": {
-            "governing-body": "Junior Roller Derby Association",
-            "governing-body-inception": "2009"
+            "governing-body-inception": "2011",
+            "founding-leagues": ["Arizona Derby Dames", "Los Angeles Derby Dolls", "OC Roller Girls", "San Diego Derby Dolls", "Tilted Thunder Roller Derby"]
         },
         "flat-track": {
-            "governing-body": "Women's Flat Track Derby Association",
-            "governing-body-inception": "2011",
-            "divisions": ["WFTDA Division 1", "WFTDA Division 2", "WFTDA Division 3"]
+            "junior-derby": {
+                "governing-body": "Junior Roller Derby Association",
+                "governing-body-inception": "2006"
+    
+            },
+            "womens-derby": {
+                "governing-body": "Women's Flat Track Derby Association",
+                "governing-body-inception": "2004",
+                "divisions": ["WFTDA Division 1", "WFTDA Division 2", "WFTDA Division 3"]
+            },
+            "mens-derby": {
+                "governing-body": "Men's Roller Derby Association",
+                "governing-body-inception": "2007"
+            }
         },
         "officials": {
             "types": ["skating (referee)", "non-skating official"],
