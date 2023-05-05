@@ -40,7 +40,7 @@
                 },
                 "jammer-referee": {
                     "amount": "2",
-                    "role": "A jammer referee watches the jammer of a designated team, awards points scored by their jammer,[1]: 36  signals whether their jammer has achieved lead jammer status,[17]: 29  and signals the end of the jam if their jammer is lead and calls off the jam."
+                    "role": "A jammer referee watches the jammer of a designated team, awards points scored by their jammer,  signals whether their jammer has achieved lead jammer status, and signals the end of the jam if their jammer is lead and calls off the jam."
                 }
             },
             "non-skating-officials": {
@@ -50,11 +50,11 @@
                 },
                 "penalty-trackers": {
                     "amount": "1 (minimum)",
-                    "role": "Record each skater's penalties[1]: 36  and notify the head referee of skaters in the current jam who are in danger of fouling out."
+                    "role": "Record each skater's penalties and notify the head referee of skaters in the current jam who are in danger of fouling out."
                 },
                 "penalty-box-manager": {
                     "amount": "1",
-                    "role": "The penalty box manager can call penalties for penalty box violations or illegal procedures.  The manager points where players are assigned to sit, times the jammers"
+                    "role": "The penalty box manager can call penalties for penalty box violations or illegal procedures. The manager points where players are assigned to sit, times the jammers"
                 },
                 "penalty-box-timer": {
                     "amount": "2 (minimum)",
