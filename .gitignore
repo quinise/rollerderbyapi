@@ -4,3 +4,4 @@ node_modules/
 *.env
 *.rtf
 *.rtfd
+*.json

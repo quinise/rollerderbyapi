@@ -58,7 +58,7 @@ h2 {
 }
 
 .code-container>ul, .code-container>li {
-    border-bottom: 1px solid #008EBD;
+    border-bottom: 1px solid #F8F9FA;
 }
 
 li.nav-item {
@@ -74,7 +74,6 @@ li.nav-item {
     margin-left: 1%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border: 1px solid #008EBD;
 }
 
 .code-container {
