@@ -30,11 +30,8 @@ body {
 nav {
     width: 100%;
     padding: 5%;
-    background: #fff;
     font-family: 'DM Mono', monospace;
 }
-
-.navbar { background: white;}
 
 .navbar-toggler-icon{
     display: inline-block;
@@ -60,13 +57,24 @@ h2 {
     font-family: 'DM Mono', monospace;
 }
 
+.code-container>ul, .code-container>li {
+    border-bottom: 1px solid #008EBD;
+}
+
+li.nav-item {
+    border-style: none;
+}
+
 .nav>li>a {
     background-color: #CAF2FD !important;
     color: black;
 }
 
 .nav>li {
-    border-radius: 5px;
+    margin-left: 1%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #008EBD;
 }
 
 .code-container {
