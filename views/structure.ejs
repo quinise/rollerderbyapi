@@ -18,6 +18,18 @@
   <%- include('partials/nav') %>
   <h1>League Structure</h1>
   <h1>Endpoint</h1>
+  <div>
+    <form action="/makeQueryStructure" method="POST">
+      <label for="queryParam">Enter query: </label>
+      <input
+        id="queryParam"
+        type="text"
+        name="queryParam_field"
+        value="structure" />
+      <input type="submit" value="Search" />
+    </form>
+  </div>
+
   <div class="code-container">
     <ul class="nav nav-tabs">
       <li class="nav-item">
