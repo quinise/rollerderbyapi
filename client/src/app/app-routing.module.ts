@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'docs/rules', component: RulesComponent },
   { path: 'docs/structure', component: StructureComponent },
+  { path: '**', pathMatch: 'full', component: ErrorComponent }
 ];
 
 @NgModule({

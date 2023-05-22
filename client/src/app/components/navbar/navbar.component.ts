@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   onNavigate(){
     window.location.href="https://github.com/quinise/rollerderbyapi";
-}
+  }
 }

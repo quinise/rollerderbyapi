@@ -8,7 +8,6 @@ import { RulesComponent } from './components/rules/rules.component';
 import { StructureComponent } from './components/structure/structure.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
-import { BodyComponent } from './body/body.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -20,6 +19,7 @@ import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +28,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     StructureComponent,
     ErrorComponent,
     HomeComponent,
-    BodyComponent,
     NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
