@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button routerLink="/docs/structure" mat-menu-item>Structure</button>
+      <button routerLink="/docs/rules" mat-menu-item>Rules</button>
+    </mat-menu>
+    <span><a routerLink="/home">Roller Derby API Documentation</a></span>
+    <span class="example-spacer"></span>
+      <button mat-icon-button (click)="onNavigate()" class="example-icon" aria-label="GitHub Octocat icon">
+        <img src="assets/github-mark.png">
+      </button>
+  </mat-toolbar>
