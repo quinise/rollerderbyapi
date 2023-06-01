@@ -1,74 +1,73 @@
-
 [
     {
-        "modern-banked-track": {
-            "governing-body": "Roller Derby Coalition of Leagues",
-            "governing-body-inception": "2011",
-            "founding-leagues": ["Arizona Derby Dames", "Los Angeles Derby Dolls", "OC Roller Girls", "San Diego Derby Dolls", "Tilted Thunder Roller Derby"]
+        "modern_banked_track": {
+            "governing_body": "Roller Derby Coalition of Leagues",
+            "governing_body_inception": "2011",
+            "founding_leagues": ["Arizona Derby Dames", "Los Angeles Derby Dolls", "OC Roller Girls", "San Diego Derby Dolls", "Tilted Thunder Roller Derby"]
         },
-        "flat-track": {
-            "junior-derby": {
-                "governing-body": "Junior Roller Derby Association",
-                "governing-body-inception": "2006"
+        "flat_track": {
+            "junior_derby": {
+                "governing_body": "Junior Roller Derby Association",
+                "governing_body_inception": "2006"
     
             },
-            "womens-derby": {
-                "governing-body": "Women's Flat Track Derby Association",
-                "governing-body-inception": "2004",
+            "womens_derby": {
+                "governing_body": "Women's Flat Track Derby Association",
+                "governing_body_inception": "2004",
                 "divisions": ["WFTDA Division 1", "WFTDA Division 2", "WFTDA Division 3"]
             },
-            "mens-derby": {
-                "governing-body": "Men's Roller Derby Association",
-                "governing-body-inception": "2007"
+            "mens_derby": {
+                "governing_body": "Men's Roller Derby Association",
+                "governing_body_inception": "2007"
             }
         },
         "officials": {
             "types": ["skating (referee)", "non-skating official"],
-            "program-certifications": {
-                "Level-1": "Other/Regulation Play",
-                "Level-2": "Regulation/Sactioned Play",
-                "Level-3": "Sanctioned/Playoffs/Championships Play"
+            "program_certifications": {
+                "Level_1": "Other/Regulation Play",
+                "Level_2": "Regulation/Sactioned Play",
+                "Level_3": "Sanctioned/Playoffs/Championships Play"
             },
             "referees": {
-                "head-referee": { 
+                "head_referee": { 
                     "amount": "1",
                     "role": "One Referee will be designated the Head Referee. The Head Referee is the ultimate authority of the game."
                 },
-                "pack-referee": {
+                "pack_referee": {
                     "amount": "up to 5",
                     "role": "Pack referees are responsible for watching the skaters in the pack, assessing pack definition, and calling penalties. They are located both inside and outside the track."
                 },
-                "jammer-referee": {
+                "jammer_referee": {
                     "amount": "2",
                     "role": "A jammer referee watches the jammer of a designated team, awards points scored by their jammer,  signals whether their jammer has achieved lead jammer status, and signals the end of the jam if their jammer is lead and calls off the jam."
                 }
             },
-            "non-skating-officials": {
+            "non_skating_officials": {
                 "scorekeepers": {
                     "amount": "2",
                     "role": "Record points scored by jammers, as indicated by the Jammer Referees."
                 },
-                "penalty-trackers": {
+                "penalty_trackers": {
                     "amount": "1 (minimum)",
                     "role": "Record each skater's penalties and notify the head referee of skaters in the current jam who are in danger of fouling out."
                 },
-                "penalty-box-manager": {
+                "penalty_box_manager": {
                     "amount": "1",
                     "role": "The penalty box manager can call penalties for penalty box violations or illegal procedures. The manager points where players are assigned to sit, times the jammers"
                 },
-                "penalty-box-timer": {
+                "penalty_box_timer": {
                     "amount": "2 (minimum)",
                     "role": "Ensure skaters sent to the penalty box serve their entire penalties."
                 },
-                "jam-timer": {
+                "jam_timer": {
                     "amount": "1",
                     "role": "Start jams, signal when a jam runs to the full two minutes, time the 30 seconds between jams, and call official timeouts."
                 },
-                "lineup-tracker": {
+                "lineup_tracker": {
                     "amount": "2",
                     "role": "Record the role (Jammer, Pivot, or Blocker) of every player on the track in each jam."
                 },
-                "scoreboard-operator": {
+                "scoreboard_operator": {
                     "amount": "1",
                     "role": "Update the scoreboard after every scoring pass"
                 }

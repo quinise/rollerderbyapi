@@ -23,6 +23,8 @@ mat-form-field {
 
 input {
     border: 1px solid black;
+    background-color: white;
+    border-radius: 3px;
     display: block;
     margin: 0 auto;
     margin-bottom: 5%;

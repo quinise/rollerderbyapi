@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { HttpClient } from "@angular/common/http";
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -12,6 +13,6 @@ export class StructureComponent {
   });
 
   onSubmit() {
-    console.log("Console.test: " + this.structureQueryForm.value.structureQueryInput)
+    console.log("form input: " + this.structureQueryForm.value.structureQueryInput)
   }
 }
