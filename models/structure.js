@@ -3,23 +3,23 @@ const mongoose = require('mongoose');
 const structureSchema = new mongoose.Schema({
     modern_banked_track: {
         governing_body: String,
-        governing_body_inception: String,
+        governing_body_inception: Number,
         founding_leagues: [String]
     },
     flat_track: {
         junior_derby: {
             governing_body: String,
-            governing_body_inception: String
+            governing_body_inception: Number
 
         },
         womens_derby: {
             governing_body: String,
-            governing_body_inception: String,
+            governing_body_inception: Number,
             divisions: [String]
         },
         mens_derby: {
             governing_body: String,
-            governing_body_inception: String
+            governing_body_inception: Number
         }
     },
     officials: {
@@ -31,7 +31,7 @@ const structureSchema = new mongoose.Schema({
         },
         referees: {
             head_referee: { 
-                amount: String,
+                amount: Number,
                 role: String
             },
             pack_referee: {
@@ -39,13 +39,13 @@ const structureSchema = new mongoose.Schema({
                 role: String
             },
             jammer_referee: {
-                amount: String,
+                amount: Number,
                 role: String
             }
         },
         non_skating_officials: {
             scorekeepers: {
-                amount: String,
+                amount: Number,
                 role: String
             },
             penalty_trackers: {
@@ -53,7 +53,7 @@ const structureSchema = new mongoose.Schema({
                 role: String
             },
             penalty_box_manager: {
-                amount: String,
+                amount: Number,
                 role: String
             },
             penalty_box_timer: {
@@ -61,15 +61,15 @@ const structureSchema = new mongoose.Schema({
                 role: String
             },
             jam_timer: {
-                amount: String,
+                amount: Number,
                 role: String
             },
             lineup_tracker: {
-                amount: String,
+                amount: Number,
                 role: String
             },
             scoreboard_operator: {
-                amount: String,
+                amount: Number,
                 role: String
             }
         }

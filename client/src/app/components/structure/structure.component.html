@@ -1,8 +1,16 @@
 <br> <br>
 <h1>Structure Endpoint</h1>
-<form [formGroup]="structureQueryForm" (ngSubmit)="onSubmit()" class="structure-query-container">
+
+<div class="code-sample">
+    <pre>
+        <code *ngFor="let structures of structure">
+        </code>
+    </pre>
+</div>
+
+<!-- <form [formGroup]="structureQueryForm" (ngSubmit)="onSubmit()" class="structure-query-container">
     <mat-form-field>
         <input type="text" id="structure-form" formControlName="structureQueryInput" matInput placeholder="query">
     </mat-form-field>
     <input type="submit">
-</form>
+</form> -->

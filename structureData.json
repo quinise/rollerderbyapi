@@ -1,24 +1,24 @@
 [
     {
-        "modern_banked_track": {
+        "banked_track": {
             "governing_body": "Roller Derby Coalition of Leagues",
-            "governing_body_inception": "2011",
+            "governing_body_inception": 2011,
             "founding_leagues": ["Arizona Derby Dames", "Los Angeles Derby Dolls", "OC Roller Girls", "San Diego Derby Dolls", "Tilted Thunder Roller Derby"]
         },
         "flat_track": {
             "junior_derby": {
                 "governing_body": "Junior Roller Derby Association",
-                "governing_body_inception": "2006"
+                "governing_body_inception": 2006
     
             },
             "womens_derby": {
                 "governing_body": "Women's Flat Track Derby Association",
-                "governing_body_inception": "2004",
+                "governing_body_inception": 2004,
                 "divisions": ["WFTDA Division 1", "WFTDA Division 2", "WFTDA Division 3"]
             },
             "mens_derby": {
                 "governing_body": "Men's Roller Derby Association",
-                "governing_body_inception": "2007"
+                "governing_body_inception": 2007
             }
         },
         "officials": {
@@ -30,7 +30,7 @@
             },
             "referees": {
                 "head_referee": { 
-                    "amount": "1",
+                    "amount": 1,
                     "role": "One Referee will be designated the Head Referee. The Head Referee is the ultimate authority of the game."
                 },
                 "pack_referee": {
@@ -38,13 +38,13 @@
                     "role": "Pack referees are responsible for watching the skaters in the pack, assessing pack definition, and calling penalties. They are located both inside and outside the track."
                 },
                 "jammer_referee": {
-                    "amount": "2",
+                    "amount": 2,
                     "role": "A jammer referee watches the jammer of a designated team, awards points scored by their jammer,  signals whether their jammer has achieved lead jammer status, and signals the end of the jam if their jammer is lead and calls off the jam."
                 }
             },
             "non_skating_officials": {
                 "scorekeepers": {
-                    "amount": "2",
+                    "amount": 2,
                     "role": "Record points scored by jammers, as indicated by the Jammer Referees."
                 },
                 "penalty_trackers": {
@@ -52,7 +52,7 @@
                     "role": "Record each skater's penalties and notify the head referee of skaters in the current jam who are in danger of fouling out."
                 },
                 "penalty_box_manager": {
-                    "amount": "1",
+                    "amount": 1,
                     "role": "The penalty box manager can call penalties for penalty box violations or illegal procedures. The manager points where players are assigned to sit, times the jammers"
                 },
                 "penalty_box_timer": {
@@ -60,15 +60,15 @@
                     "role": "Ensure skaters sent to the penalty box serve their entire penalties."
                 },
                 "jam_timer": {
-                    "amount": "1",
+                    "amount": 1,
                     "role": "Start jams, signal when a jam runs to the full two minutes, time the 30 seconds between jams, and call official timeouts."
                 },
                 "lineup_tracker": {
-                    "amount": "2",
+                    "amount": 2,
                     "role": "Record the role (Jammer, Pivot, or Blocker) of every player on the track in each jam."
                 },
                 "scoreboard_operator": {
-                    "amount": "1",
+                    "amount": 1,
                     "role": "Update the scoreboard after every scoring pass"
                 }
             }
