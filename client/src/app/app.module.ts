@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OfficialsComponent } from './components/officials/officials.component';
+import { StructureService } from './services/structure.service';
 
 @NgModule({
   declarations: [
@@ -51,9 +52,10 @@ import { OfficialsComponent } from './components/officials/officials.component';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [StructureService],
   bootstrap: [AppComponent]
 })
 

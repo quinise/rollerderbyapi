@@ -1,12 +1,20 @@
 <br> <br>
 <h1>Structure Endpoint</h1>
 
-<div class="code-sample">
-    <pre>
-        <code *ngFor="let structures of structure">
-        </code>
-    </pre>
-</div>
+<div class="code-container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active border border-light border-bottom-0" aria-current="page" href="#">JSON</a>
+      </li>
+    </ul>
+    <div class="code-sample" *ngFor="let structure of structures">
+      <pre>
+        <code>
+            {{ structure.banked_track }}
+        </code> 
+      </pre>
+    </div>
+  </div>
 
 <!-- <form [formGroup]="structureQueryForm" (ngSubmit)="onSubmit()" class="structure-query-container">
     <mat-form-field>

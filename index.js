@@ -2,17 +2,14 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const express = require("express");
-const http = require('http')
 const bodyParser = require('body-parser');
 const path = require("path")
 const port = process.env.PORT !== undefined ? parseInt(process.env.PORT) : 3000;
 const dbPW = process.env.DB_PASSWORD;
 const dbUser = process.env.DB_USER;
 const uri = `mongodb+srv://${dbUser}:${dbPW}@derby-api-cluster.6nrongd.mongodb.net/?retryWrites=true&w=majority`;
-const Structure = require('./models/structure');
 const app = express();
 const { MongoClient } = require('mongodb');
-const { default: cli } = require('@angular/cli');
 const client = new MongoClient(uri);
 
 app.use(cors());
@@ -60,7 +57,6 @@ app.get("/api/structure", async (req, res) => {
         await client.db("admin").command({ ping: 1 });
 
         result = await client.db("derbyApi_db").collection("structure").find({"flat_track.womens_derby.governing_body" : "Women's Flat Track Derby Association"}).toArray();
-        // res.json({"structure": result});
     } catch(err) {
         console.log("Error: " +  err);
     } finally {
@@ -68,10 +64,7 @@ app.get("/api/structure", async (req, res) => {
         console.log("Disconnected (from database) successfully to server");
     }
 
-    return res.json({
-        status: 'success',
-        data: result
-    })
+    return res.json({ data: result })
 });
 
 // TODO input from angular to search in structure endpoint
