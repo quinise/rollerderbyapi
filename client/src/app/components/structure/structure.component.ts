@@ -11,14 +11,11 @@ import { StructureService } from 'src/app/services/structure.service';
 })
 export class StructureComponent implements OnInit {
   structures: StructureInterface[] = [];
-  constructor(private http: HttpClient, private structureService: StructureService) {}
-  
+
+  constructor(private http: HttpClient, private structureService: StructureService) {}  
+
   ngOnInit(): void {
-    this.structureService.getStructureData().subscribe((structures: StructureInterface[]) => {
-      console.log('res ', structures);
-      this.structures = structures;
-    })
-  }
+    this.structures = this.structureService.getStructureData();
   // structureQueryForm = new FormGroup({
   //   structureQueryInput: new FormControl(''),
   // });
@@ -26,4 +23,5 @@ export class StructureComponent implements OnInit {
   // onSubmit() {
   //   console.log("form input: " + this.structureQueryForm.value.structureQueryInput)
   // }
+  }
 }

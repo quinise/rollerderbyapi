@@ -87,14 +87,6 @@ app.get("/api/officials", async (req, res) => {
     }
 });
 
-app.get("/docs/structure", (req, res) => {
-    res.render('structure.ejs');
-});
-
-app.get("/docs/rules", (req, res) => {
-    res.render('rules.ejs');
-});
-
 app.get("/structure", (req, res) => {
     res.header("Content-Type", 'application/json');
     res.sendFile(path.join(__dirname, 'structureData.json'));

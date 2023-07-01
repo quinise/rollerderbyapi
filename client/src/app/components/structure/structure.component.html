@@ -8,10 +8,30 @@
       </li>
     </ul>
     <div class="code-sample" *ngFor="let structure of structures">
-      <pre>
-        <code>
-            {{ structure.banked_track }}
-        </code> 
+      <pre class="code">
+        <code>{{ '{' }}</code>
+        <code>   _id:   {{ structure._id }}</code>
+        <code>   modern_banked_track: {{'{' }}</code>
+        <code>       founding_leagues: {{ structure.modern_banked_track.founding_leagues }}</code>
+        <code>       governing_body: {{ structure.modern_banked_track.governing_body }}</code>
+        <code>       governing_body_inception: {{ structure.modern_banked_track.governing_body_inception }}</code>
+        <code>{{'   },' }}</code>
+        <code>   flat_track: {{'{' }}</code>
+        <code>            junior_derby: {{'{' }}</code>
+        <code>                governing_body: {{structure.flat_track.junior_derby.governing_body}}</code>
+        <code>                governing_body_inception: {{structure.flat_track.junior_derby.governing_body_inception}}</code>
+        <code>{{'             },' }}</code>
+        <code>            womens_derby: {{ '{' }}</code>
+        <code>                governing_body: {{ structure.flat_track.womens_derby.governing_body }}</code>
+        <code>                governing_body_inception: {{ structure.flat_track.womens_derby.governing_body_inception }}</code>
+        <code>                divisions: {{ structure.flat_track.womens_derby.divisions }}</code>
+        <code>{{'             },' }}</code>
+        <code>            mens_derby: {{ '{' }}</code>
+        <code>                governing_body: {{ structure.flat_track.mens_derby.governing_body }}</code>
+        <code>                governing_body_inception: {{ structure.flat_track.mens_derby.governing_body_inception }}</code>
+        <code>{{'             },' }}</code>
+        <code>{{'  },' }}</code>
+        <code>{{'}' }}</code>
       </pre>
     </div>
   </div>
