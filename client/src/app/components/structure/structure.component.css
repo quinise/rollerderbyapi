@@ -3,6 +3,30 @@ h1 {
    margin-bottom: 5%;
 }
 
+.structure-intro p{
+  text-align: center;
+}
+
+.endpoint-container {
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 100px;
+  width: 350px;
+  border: solid black 3px;
+}
+
+.endpoint-container p {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.code-container {
+  margin: 0 auto;
+  width: 75%;
+}
+
+
 pre.code {
     white-space: pre-wrap;
   }

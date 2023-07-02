@@ -16,12 +16,5 @@ export class StructureComponent implements OnInit {
 
   ngOnInit(): void {
     this.structures = this.structureService.getStructureData();
-  // structureQueryForm = new FormGroup({
-  //   structureQueryInput: new FormControl(''),
-  // });
-
-  // onSubmit() {
-  //   console.log("form input: " + this.structureQueryForm.value.structureQueryInput)
-  // }
   }
 }

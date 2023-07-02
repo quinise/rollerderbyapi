@@ -1,44 +1,44 @@
-<br> <br>
-<h1>Structure Endpoint</h1>
+<div class="container">
+  <h1>Structure Endpoint</h1>
 
-<div class="code-container">
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active border border-light border-bottom-0" aria-current="page" href="#">JSON</a>
-      </li>
-    </ul>
-    <div class="code-sample" *ngFor="let structure of structures">
-      <pre class="code">
-        <code>{{ '{' }}</code>
-        <code>   _id:   {{ structure._id }}</code>
-        <code>   modern_banked_track: {{'{' }}</code>
-        <code>       founding_leagues: {{ structure.modern_banked_track.founding_leagues }}</code>
-        <code>       governing_body: {{ structure.modern_banked_track.governing_body }}</code>
-        <code>       governing_body_inception: {{ structure.modern_banked_track.governing_body_inception }}</code>
-        <code>{{'   },' }}</code>
-        <code>   flat_track: {{'{' }}</code>
-        <code>            junior_derby: {{'{' }}</code>
-        <code>                governing_body: {{structure.flat_track.junior_derby.governing_body}}</code>
-        <code>                governing_body_inception: {{structure.flat_track.junior_derby.governing_body_inception}}</code>
-        <code>{{'             },' }}</code>
-        <code>            womens_derby: {{ '{' }}</code>
-        <code>                governing_body: {{ structure.flat_track.womens_derby.governing_body }}</code>
-        <code>                governing_body_inception: {{ structure.flat_track.womens_derby.governing_body_inception }}</code>
-        <code>                divisions: {{ structure.flat_track.womens_derby.divisions }}</code>
-        <code>{{'             },' }}</code>
-        <code>            mens_derby: {{ '{' }}</code>
-        <code>                governing_body: {{ structure.flat_track.mens_derby.governing_body }}</code>
-        <code>                governing_body_inception: {{ structure.flat_track.mens_derby.governing_body_inception }}</code>
-        <code>{{'             },' }}</code>
-        <code>{{'  },' }}</code>
-        <code>{{'}' }}</code>
-      </pre>
-    </div>
+  <div class="structure-intro row">
+    <p>The Structure endpoint provides information about the Women's Flat Track Derby Association, Junior Roller Derby Association, Men's Roller Derby Association, and Roller Derby Coalition of Leagues roller derby organizations.</p>
   </div>
-
-<!-- <form [formGroup]="structureQueryForm" (ngSubmit)="onSubmit()" class="structure-query-container">
-    <mat-form-field>
-        <input type="text" id="structure-form" formControlName="structureQueryInput" matInput placeholder="query">
-    </mat-form-field>
-    <input type="submit">
-</form> -->
+  <div class="endpoint-container row">
+    <p>http://localhost:3000/api/structure</p>
+  </div>
+  <div class="code-container row">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active border border-light border-bottom-0" aria-current="page" href="#">JSON</a>
+        </li>
+      </ul>
+      <div class="code-sample" *ngFor="let structure of structures">
+        <pre class="code">
+          <code>{{ '{' }}</code>
+          <code>   _id:   {{ structure._id }},</code>
+          <code>   modern_banked_track: {{'{' }}</code>
+          <code>       founding_leagues: {{ structure.modern_banked_track.founding_leagues }},</code>
+          <code>       governing_body: {{ structure.modern_banked_track.governing_body }},</code>
+          <code>       governing_body_inception: {{ structure.modern_banked_track.governing_body_inception }}</code>
+          <code>{{'   },' }}</code>
+          <code>   flat_track: {{'{' }}</code>
+          <code>            junior_derby: {{'{' }}</code>
+          <code>                governing_body: {{structure.flat_track.junior_derby.governing_body}},</code>
+          <code>                governing_body_inception: {{structure.flat_track.junior_derby.governing_body_inception}}</code>
+          <code>{{'             },' }}</code>
+          <code>            womens_derby: {{ '{' }}</code>
+          <code>                governing_body: {{ structure.flat_track.womens_derby.governing_body }},</code>
+          <code>                governing_body_inception: {{ structure.flat_track.womens_derby.governing_body_inception }},</code>
+          <code>                divisions: {{ structure.flat_track.womens_derby.divisions }}</code>
+          <code>{{'             },' }}</code>
+          <code>            mens_derby: {{ '{' }}</code>
+          <code>                governing_body: {{ structure.flat_track.mens_derby.governing_body }},</code>
+          <code>                governing_body_inception: {{ structure.flat_track.mens_derby.governing_body_inception }}</code>
+          <code>{{'             }' }}</code>
+          <code>{{'  }' }}</code>
+          <code>{{'}' }}</code>
+        </pre>
+      </div>
+    </div>
+</div>

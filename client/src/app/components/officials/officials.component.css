@@ -1,0 +1,45 @@
+h1 {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.officials-info p{
+  text-align: center;
+}
+
+.endpoint-container {
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 100px;
+  width: 350px;
+  border: solid black 3px;
+}
+
+.code-container {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.endpoint-container p {
+  margin-top: 10%;
+  text-align: center;
+}
+
+pre.code {
+    white-space: pre-wrap;
+  }
+  pre.code::before {
+    counter-reset: listing;
+  }
+  pre.code code {
+    counter-increment: listing;
+  }
+  pre.code code::before {
+    content: counter(listing) ". ";
+    display: inline-block;
+    width: 8em;         /* now works */
+    padding-left: auto; /* now works */
+    margin-left: auto;  /* now works */
+    text-align: right;  /* now works */
+  }

@@ -1,10 +1,110 @@
-<br> <br>
-<h1>Rules Endpoint</h1>
-<div class="rules-query-container">
-    <mat-form-field>
-        <input matInput placeholder="query">
-    </mat-form-field>
-    <button mat-button class="submit-button">
-        Request
-    </button>
+<div class="container">
+    <h1>Rules Endpoint</h1>
+    
+    <div class="rules-info row">
+        <p>The Rules endpoint provides the WFTDA roller derby ruleset</p>
+    </div>
+    <div class="endpoint-container row">
+        <p>http://localhost:3000/api/rules</p>
+    </div>
+    <div class="code-container">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active border border-light border-bottom-0" aria-current="page" href="#">JSON</a>
+          </li>
+        </ul>
+        <div class="code-sample" *ngFor="let ruleset of rules">
+          <pre class="code">
+            <code>{{ '{' }}</code>
+            <code>  _id:   {{ ruleset._id }},</code>
+            <code>  description:   {{ ruleset.description }},</code>
+            <code>  game_parameters_and_safety: {{ '{' }} </code>
+            <code>      timing: {{ '{' }}</code>
+            <code>          game_duration: {{ ruleset.game_parameters_and_safety.timing.game_duration }},</code>
+            <code>          jam_duration: {{ ruleset.game_parameters_and_safety.timing.jam_duration }}</code>
+            <code>{{'       },' }}</code>
+            <code>      teams: {{ '{' }}</code>
+            <code>          team: {{ ruleset.game_parameters_and_safety.teams.team }},</code>
+            <code>          skater: {{ ruleset.game_parameters_and_safety.teams.skater }}</code>
+            <code>{{'       },' }}</code>
+            <code>      timeouts: {{ '{' }}</code>
+            <code>          team_timeouts: {{ ruleset.game_parameters_and_safety.timeouts.team_timeouts }},</code>
+            <code>          official_timeouts: {{ ruleset.game_parameters_and_safety.timeouts.official_timeouts }},</code>
+            <code>          official_reviews: {{ ruleset.game_parameters_and_safety.timeouts.official_reviews }}</code>
+            <code>{{'       },' }}</code>
+            <code>      game_information: {{ ruleset.game_parameters_and_safety.game_information }}</code>
+            <code>{{'  },' }}</code>
+            <code>  gameplay: {{ '{' }} </code>
+            <code>      track: {{ ruleset.gameplay.track }},</code>
+            <code>      positions: {{ '{' }} </code>
+            <code>          definition: {{ ruleset.gameplay.positions.definition }},</code>
+            <code>          jammer: {{ ruleset.gameplay.positions.jammer }},</code>
+            <code>          lead_jammer: {{ ruleset.gameplay.positions.lead_jammer }},</code>
+            <code>          pivot_blocker: {{ ruleset.gameplay.positions.pivot_blocker }},</code>
+            <code>          star_pass: {{ ruleset.gameplay.positions.star_pass }},</code>
+            <code>          blockers: {{ ruleset.gameplay.positions.blockers }}</code>
+            <code>{{'       },' }}</code>
+            <code>      engagement_zone_and_pack: {{ ruleset.gameplay.engagement_zone_and_pack }},</code>
+            <code>      blocks_and_assists: {{ '{' }} </code>
+            <code>          blocking: {{ ruleset.gameplay.blocks_and_assists.blocking }},</code>
+            <code>          target_zones: {{ ruleset.gameplay.blocks_and_assists.target_zones }},</code>
+            <code>          blocking_zones: {{ ruleset.gameplay.blocks_and_assists.blocking_zones }}</code>
+            <code>{{'       },' }}</code>
+            <code>      passing: {{ '{' }} </code>
+            <code>          definition: {{ ruleset.gameplay.passing.definition }},</code>
+            <code>          jammers: {{ ruleset.gameplay.passing.jammers }}</code>
+            <code>{{'       },' }}</code>
+            <code>  scoring: {{ '{' }} </code>
+            <code>      earning_points: {{ ruleset.scoring.earning_points }},</code>
+            <code>      scoring_avoidance: {{ ruleset.scoring.scoring_avoidance }},</code>
+            <code>      penalized_jammers: {{ ruleset.scoring.penalized_jammers }}</code>
+            <code>{{'       },' }}</code>
+            <code>  penalties: {{ '{' }} </code>
+            <code>      definition: {{ ruleset.penalties.definition }},</code>
+            <code>      contact_penalties: {{ '{' }} </code>
+            <code>          definition: {{ ruleset.penalties.contact_penalties.definition }},</code>
+            <code>          star_passes: {{ ruleset.penalties.contact_penalties.star_passes }}</code>
+            <code>{{'       },' }}</code>
+            <code>      illegal_target_zone: {{ ruleset.penalties.illegal_target_zone }},</code>
+            <code>      presenting_target_zone: {{ ruleset.penalties.presenting_target_zone }},</code>
+            <code>      impact_with_illegal_blocking_zone: {{ ruleset.penalties.impact_with_illegal_blocking_zone }},</code>
+            <code>      other_illegal_contact: {{ ruleset.penalties.other_illegal_contact }},</code>
+            <code>      multiplayer_blocks: {{ ruleset.penalties.multiplayer_blocks }}</code>
+            <code>      game_structure_penalties: {{ '{' }} </code>
+            <code>          definition: {{ ruleset.penalties.game_structure_penalties.definition }},</code>
+            <code>          illegal_positioning: {{ ruleset.penalties.game_structure_penalties.illegal_positioning }},</code>
+            <code>          gaining_position: {{ '{' }}</code>
+            <code>              definition: {{ ruleset.penalties.game_structure_penalties.gaining_position.definition }},</code>
+            <code>              return_to_action: {{ ruleset.penalties.game_structure_penalties.gaining_position.return_to_action }}</code>
+            <code>{{'          },' }}</code>
+            <code>          interfering_with_game: {{ ruleset.penalties.game_structure_penalties.interfering_with_game }},</code>
+            <code>          other_illegal_procedures: {{ ruleset.penalties.game_structure_penalties.other_illegal_procedures }}</code>
+            <code>{{'   },' }}</code>
+            <code>      misconduct: {{ ruleset.penalties.misconduct }},</code>
+            <code>      enforcing_penalties: {{ '{' }} </code>
+            <code>          definition: {{ ruleset.penalties.enforcing_penalties.definition }},</code>
+            <code>          penalty_enforcement_blocker: {{ '{' }} </code>
+            <code>              definition: {{ ruleset.penalties.enforcing_penalties.penalty_enforcement_blocker }},</code>
+            <code>              seat_unavailable: {{ ruleset.penalties.enforcing_penalties.penalty_enforcement_blocker.seat_unavailable }}</code>
+            <code>{{'       },' }}</code>
+            <code>          penalty_enforcement_jammer: {{ ruleset.penalties.enforcing_penalties.penalty_enforcement_jammer }},</code>
+            <code>      fouling_out_expulsions: {{ '{' }} </code>
+            <code>          fouling_out: {{ ruleset.penalties.fouling_out_expulsions.fouling_out }},</code>
+            <code>          expulsion: {{ ruleset.penalties.fouling_out_expulsions.expulsion }}</code>
+            <code>{{'       },' }}</code>
+            <code>   officiating: {{ '{' }}</code>
+            <code>          distinction: {{ ruleset.officiating.distinction }},</code>
+            <code>          requirements: {{ ruleset.officiating.requirements }},</code>
+            <code>          duties: {{ ruleset.officiating.duties }},</code>
+            <code>          skater_official_communication: {{ ruleset.officiating.skater_official_communication }}</code>
+            <code>{{'},' }}</code>
+            <code>   gear: {{ '{' }}</code>
+            <code>      basic: {{ ruleset.gear.basic }},</code>
+            <code>      advanced: {{ ruleset.gear.advanced }}</code>
+            <code>{{' }' }}</code>
+            <code>{{'}' }}</code>
+          </pre>
+        </div>
+      </div>
 </div>
+

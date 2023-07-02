@@ -39,7 +39,7 @@ app.get("/api/rules", async (req, res) => {
         await client.db("admin").command({ ping: 1 });
 
         result = await client.db("derbyApi_db").collection("rules").find({"description" : "Flat Track Roller Derby is played on a flat, oval track. Play is broken up into two 30-minute periods, and within those periods, into units of play called “Jams,” which last up to two minutes. \\n During a Jam, each team fields up to five Skaters. Four of these Skaters are called “Blockers” (together, the Blockers are called the “Pack”), and one is called a “Jammer.” The Jammer wears a helmet cover with a star on it. \\n The two Jammers start each Jam behind the Pack, and score a point for every opposing Blocker they lap, each lap. Because they start behind the Pack, they must get through the Pack, then all the way around the track to be eligible to score points on opposing Blockers."}).toArray();
-        res.json({"rules": result});
+        res.json({"data": result});
     } catch(err) {
         console.log("Error: " +  err);
     } finally {
@@ -77,7 +77,7 @@ app.get("/api/officials", async (req, res) => {
         await client.db("admin").command({ ping: 1 });
 
         result = await client.db("derbyApi_db").collection("officials").find({"program_certifications.Level_1" : "Other/Regulation Play"}).toArray();
-        res.json({"officials": result});
+        res.json({ data: result });
     } catch(err) {
         // angular route 404
         console.log("Error: " +  err);

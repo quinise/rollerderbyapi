@@ -1,29 +1,45 @@
 h1 {
-    margin-left: 30%;
- }
- 
- .rules-query-container {
-     margin: 0 auto;
-     border: 2px solid black;
-     display: block;
-     max-height: 70%;
-     max-width: 50%;
-     margin-left: 23%;
-     margin-bottom: 5%;
- }
- 
- .rules-query-container > * {
-     width: 50%;
- }
- 
- mat-form-field {
-     margin-left: 25%;
-     margin-top: 5%;
- }
- 
- button {
-     border: 1px solid black;
-     display: block;
-     margin: 0 auto;
-     margin-bottom: 5%;
- }
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.rules-info p{
+    text-align: center;
+  }
+
+.endpoint-container {
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 100px;
+    width: 350px;
+    border: solid black 3px;
+  }
+  
+  .endpoint-container p {
+    margin-top: 10%;
+    text-align: center;
+  }
+  
+.code-container {
+margin: 0 auto;
+width: 75%;
+}
+
+pre.code {
+  white-space: pre-wrap;
+}
+pre.code::before {
+  counter-reset: listing;
+}
+pre.code code {
+  counter-increment: listing;
+}
+pre.code code::before {
+  content: counter(listing) ". ";
+  display: inline-block;
+  width: 8em;
+  padding-left: auto;
+  margin-left: auto;
+  text-align: right;
+}
