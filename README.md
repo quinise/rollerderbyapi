@@ -8,12 +8,21 @@ This is the repository for the Roller Derby API.
 
 ## Description
 
-Served by a Node.js server and serving static files in Express.js, this website was written in HTML5, EJS, and CSS/Bootsrap. The site includes doccumentation for the "League Structure" and "Rules" endpoints.
+A Node.js server connects to a Mongo Database to get responses filled with data from the Structures, Rules, and Officials collections. The documentation for the API is hosted by an Angular client.
 
 ### Executing the program
 
+### Starting the Documentation Server (Angular Client)
+
 ```
+cd client
+
 npm start
+```
+
+### Starting the API Server (Node.js)
+```
+npm run start:dev
 ```
 
 ## Author
