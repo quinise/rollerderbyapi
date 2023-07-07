@@ -10,6 +10,8 @@ h1 {
     display: inline block;
     float: right;
     width: 50%;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .intro p {
@@ -21,6 +23,7 @@ h1 {
     margin-bottom: 5%;
     text-align: center;
     width: 50%;
+    font-family: 'Lora', serif;
 }
 
 .api-graphic-container {
@@ -34,6 +37,8 @@ h1 {
 
 h2 {
     display: block;
+    color:white;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .endpoint-button-container {
@@ -61,6 +66,7 @@ td, th {
     .endpoint-button h4 {
         padding-top: 20%;
         color: white;
+        font-family: 'Lora', serif;
         text-align: center;
     }
 

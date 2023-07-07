@@ -5,7 +5,6 @@
 
 body {
     color: black;
-    font-family: "Lateef", serif;
     position: relative;
     text-align: center;
     margin-bottom: 0;
@@ -16,6 +15,7 @@ body {
     align-items: stretch;
     height: 100vh;
     width: 100vh;
+    font-family: 'Lora', serif;
     background-image: linear-gradient(#6BF3B3, #86CCC2);
 
   } 
@@ -40,7 +40,8 @@ h1 {
     display: block;
     margin-top: 20%;
     text-align: center;
-    color: black;    
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;    
 }
 
 h2 {

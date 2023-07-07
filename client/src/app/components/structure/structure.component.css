@@ -1,10 +1,13 @@
 h1 {
    margin-top: 10%;
    margin-bottom: 5%;
+   color: white;
+   font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .structure-intro p{
   text-align: center;
+  font-family: 'Lora', serif;
 }
 
 .endpoint-container {
@@ -18,14 +21,15 @@ h1 {
 
 .endpoint-container p {
   margin-top: 10%;
+  font-family: 'Lora', serif;
   text-align: center;
 }
 
 .code-container {
   margin: 0 auto;
   width: 75%;
-  background-color: #DEF4EA;
   border-radius: 8px;
+  background-color: #DEF4EA;
 }
 
 
