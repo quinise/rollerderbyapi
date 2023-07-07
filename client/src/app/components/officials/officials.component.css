@@ -2,11 +2,15 @@ h1 {
   margin-top: 10%;
   margin-bottom: 5%;
   color: white;
+  font-size: 40px;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.officials-info p{
+.officials-info p {
   text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  color: #2E413D;
   font-family: 'Lora', serif;
 }
 
@@ -16,7 +20,7 @@ h1 {
   margin-bottom: 5%;
   height: 100px;
   width: 350px;
-  border: solid black 3px;
+  border: solid #2E413D 3px;
 }
 
 .code-container {
@@ -29,7 +33,12 @@ h1 {
 .endpoint-container p {
   margin-top: 10%;
   text-align: center;
+  color: #2E413D;
   font-family: 'Lora', serif;
+}
+
+.tab-text {
+  color:#2E413D;
 }
 
 pre.code {
@@ -53,7 +62,7 @@ pre.code {
     text-align: right;  /* now works */
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     h1 {
       margin-top: 20%;
       margin-left: 22%;

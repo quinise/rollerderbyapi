@@ -2,11 +2,10 @@
     <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <mat-menu #menu="matMenu">
-      <button routerLink="/docs/structure" mat-menu-item>Structure Endpoint</button>
-      <button routerLink="/docs/rules" mat-menu-item>Rules Endpoint</button>
-      <button routerLink="/docs/officials" mat-menu-item>Officials Endpoint</button>
-
+    <mat-menu class="menu-buttons" #menu="matMenu">
+        <button routerLink="/docs/structure" mat-menu-item><span class="menu-text">Structure Endpoint</span></button>
+        <button routerLink="/docs/rules" mat-menu-item><span class="menu-text">Rules Endpoint</span></button>
+        <button routerLink="/docs/officials" mat-menu-item><span class="menu-text">Officials Endpoint</span></button>
     </mat-menu>
     <span><a routerLink="/home">Roller Derby API Documentation</a></span>
     <span class="example-spacer"></span>

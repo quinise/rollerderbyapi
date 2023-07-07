@@ -18,3 +18,12 @@
     margin-bottom: 5%;
     background-color: #74AAA2;
   }
+
+  ::ng-deep .menu-buttons {
+    background-color: #DEF4EA;
+  }
+
+  .menu-text {
+    color: #2E413D;
+    font-family: 'Lora', serif;
+  }

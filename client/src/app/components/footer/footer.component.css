@@ -10,8 +10,9 @@
     text-align: center;
     width: 100%;
     height: 2.5rem;
+    color: #2E413D;
     font-size: xx-small;
-    font-family: "Gudea", sans-serif;
+    font-family: 'Lora', serif;
 }
 
 #footer a:link { text-decoration: none; }
