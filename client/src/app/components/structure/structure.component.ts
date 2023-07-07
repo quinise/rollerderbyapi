@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 import { StructureInterface } from 'src/app/types/structure.interface';
 import { StructureService } from 'src/app/services/structure.service';
 

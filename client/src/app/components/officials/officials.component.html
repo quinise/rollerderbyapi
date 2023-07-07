@@ -1,5 +1,4 @@
 <h1>Officials Endpoint</h1>
-
 <div class="officials-info">
   <p>The Officials endpoint provides information about the types, roles, counts of roller derby officials.</p>
 </div>
@@ -7,67 +6,67 @@
   <p>http://localhost:3000/api/officials</p>
 </div>
 <div class="code-container">
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active border border-light border-bottom-0" aria-current="page" href="#"><span class="tab-text">JSON</span></a>
-      </li>
-    </ul>
-    <div class="code-sample" *ngFor="let official of officials">
-      <pre class="code">
-        <code>{{ '{' }}</code>
-        <code>  _id:   {{ official._id }},</code>
-        <code>  officials: {{'{' }}</code>
-        <code>       types: {{ official.types }},</code>
-        <code>       program_certifications: {{ '{' }}</code>
-        <code>              Level_1: {{ official.program_certifications.Level_1 }},</code>
-        <code>              Level_2: {{ official.program_certifications.Level_2 }},</code>
-        <code>              Level_3: {{ official.program_certifications.Level_3 }}</code>
-        <code>{{'       },' }}</code>
-        <code>       referees: {{ '{' }}</code>
-        <code>          head_referee: {{ '{' }}</code>
-        <code>            amount: {{ official.referees.head_referee.amount }},</code>
-        <code>            role: {{ official.referees.head_referee.role }}</code>
-        <code>{{'          },' }}</code>
-        <code>          pack_referee: {{ '{' }}</code>
-        <code>            amount: {{ official.referees.pack_referee.amount }},</code>
-        <code>            role: {{ official.referees.pack_referee.role }}</code>
-        <code>{{'          },' }}</code>
-        <code>          jammer_referee: {{ '{' }}</code>
-        <code>            amount: {{ official.referees.jammer_referee.amount }},</code>
-        <code>            role: {{ official.referees.jammer_referee.role }}</code>
-        <code>{{'          },' }}</code>
-        <code>{{'     },' }}</code>
-        <code>      non_skating_officials: {{'{' }}</code>
-        <code>            scorekeepers: {{'{' }}</code>
-        <code>                amount: {{official.non_skating_officials.scorekeepers.amount}},</code>
-        <code>                role: {{official.non_skating_officials.scorekeepers.role}}</code>
-        <code>{{'             },' }}</code>
-        <code>            scoreboard_operator: {{'{' }}</code>
-        <code>                amount: {{official.non_skating_officials.scoreboard_operator.amount}},</code>
-        <code>                role: {{official.non_skating_officials.scoreboard_operator.role}}</code>
-        <code>{{'             },' }}</code>
-        <code>            penalty_box_manager: {{ '{' }}</code>
-        <code>                amount: {{official.non_skating_officials.penalty_box_manager.amount}},</code>
-        <code>                role: {{official.non_skating_officials.penalty_box_manager.role}}</code>
-        <code>{{'             },' }}</code>
-        <code>            penalty_box_timer: {{ '{' }}</code>
-        <code>                amount: {{official.non_skating_officials.penalty_box_timer.amount}}</code>
-        <code>                role: {{official.non_skating_officials.penalty_box_timer.role}}</code>
-        <code>{{'             },' }}</code>
-        <code>            penalty_trackers: {{ '{' }}</code>
-        <code>                amount: {{official.non_skating_officials.penalty_trackers.amount}},</code>
-        <code>                role: {{official.non_skating_officials.penalty_trackers.role}}</code>
-        <code>{{'             },' }}</code>
-        <code>            jam_timer: {{ '{' }}</code>
-        <code>                amount: {{official.non_skating_officials.jam_timer.amount}},</code>
-        <code>                role: {{official.non_skating_officials.jam_timer.role}}</code>
-        <code>{{'             },' }}</code>
-        <code>            lineup_tracker: {{ '{' }}</code>
-        <code>                amount: {{official.non_skating_officials.lineup_tracker.amount}},</code>
-        <code>                role: {{official.non_skating_officials.lineup_tracker.role}}</code>
-        <code>{{'             }' }}</code>
-        <code>{{'      }' }}</code>
-        <code>{{'}' }}</code>
-      </pre>
-    </div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active border border-light border-bottom-0" aria-current="page" href="#"><span class="tab-text">JSON</span></a>
+    </li>
+  </ul>
+  <div class="code-sample" *ngFor="let official of officials">
+    <pre class="code">
+      <code>{{ '{' }}</code>
+      <code>  _id:   {{ official._id }},</code>
+      <code>  officials: {{'{' }}</code>
+      <code>       types: {{ official.types }},</code>
+      <code>       program_certifications: {{ '{' }}</code>
+      <code>              Level_1: {{ official.program_certifications.Level_1 }},</code>
+      <code>              Level_2: {{ official.program_certifications.Level_2 }},</code>
+      <code>              Level_3: {{ official.program_certifications.Level_3 }}</code>
+      <code>{{'       },' }}</code>
+      <code>       referees: {{ '{' }}</code>
+      <code>          head_referee: {{ '{' }}</code>
+      <code>            amount: {{ official.referees.head_referee.amount }},</code>
+      <code>            role: {{ official.referees.head_referee.role }}</code>
+      <code>{{'          },' }}</code>
+      <code>          pack_referee: {{ '{' }}</code>
+      <code>            amount: {{ official.referees.pack_referee.amount }},</code>
+      <code>            role: {{ official.referees.pack_referee.role }}</code>
+      <code>{{'          },' }}</code>
+      <code>          jammer_referee: {{ '{' }}</code>
+      <code>            amount: {{ official.referees.jammer_referee.amount }},</code>
+      <code>            role: {{ official.referees.jammer_referee.role }}</code>
+      <code>{{'          },' }}</code>
+      <code>{{'     },' }}</code>
+      <code>      non_skating_officials: {{'{' }}</code>
+      <code>            scorekeepers: {{'{' }}</code>
+      <code>                amount: {{official.non_skating_officials.scorekeepers.amount}},</code>
+      <code>                role: {{official.non_skating_officials.scorekeepers.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            scoreboard_operator: {{'{' }}</code>
+      <code>                amount: {{official.non_skating_officials.scoreboard_operator.amount}},</code>
+      <code>                role: {{official.non_skating_officials.scoreboard_operator.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            penalty_box_manager: {{ '{' }}</code>
+      <code>                amount: {{official.non_skating_officials.penalty_box_manager.amount}},</code>
+      <code>                role: {{official.non_skating_officials.penalty_box_manager.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            penalty_box_timer: {{ '{' }}</code>
+      <code>                amount: {{official.non_skating_officials.penalty_box_timer.amount}}</code>
+      <code>                role: {{official.non_skating_officials.penalty_box_timer.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            penalty_trackers: {{ '{' }}</code>
+      <code>                amount: {{official.non_skating_officials.penalty_trackers.amount}},</code>
+      <code>                role: {{official.non_skating_officials.penalty_trackers.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            jam_timer: {{ '{' }}</code>
+      <code>                amount: {{official.non_skating_officials.jam_timer.amount}},</code>
+      <code>                role: {{official.non_skating_officials.jam_timer.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            lineup_tracker: {{ '{' }}</code>
+      <code>                amount: {{official.non_skating_officials.lineup_tracker.amount}},</code>
+      <code>                role: {{official.non_skating_officials.lineup_tracker.role}}</code>
+      <code>{{'             }' }}</code>
+      <code>{{'      }' }}</code>
+      <code>{{'}' }}</code>
+    </pre>
   </div>
+</div>

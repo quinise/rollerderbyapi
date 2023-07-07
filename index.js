@@ -26,10 +26,6 @@ app.use((req, res, next) => {
     next();
 })
 
-app.get("/", (req, res) => {
-    res.render('home.ejs');
-});
-
 app.get("/api/rules", async (req, res) => {
     let result = null;
     try {
@@ -85,16 +81,6 @@ app.get("/api/officials", async (req, res) => {
         await client.close();
         console.log("Disconnected (from database) successfully to server");
     }
-});
-
-app.get("/structure", (req, res) => {
-    res.header("Content-Type", 'application/json');
-    res.sendFile(path.join(__dirname, 'structureData.json'));
-});
-
-app.get("/rules", (req, res) => {
-    res.header("Content-Type", 'application/json');
-    res.sendFile(path.join(__dirname, 'rulesData.json'));
 });
 
 app.use((req, res, next) => {
