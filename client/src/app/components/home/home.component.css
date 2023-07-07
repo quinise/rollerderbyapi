@@ -1,11 +1,108 @@
 .intro {
     width: 100%;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
-.introduction-img {
+h1 {
+    position: absolute;
+    top: 250px; 
+    right: 75px;
+    display: inline block;
+    float: right;
+    width: 50%;
+}
+
+.intro p {
+    top: 350px;
+    position: relative;
+    display: block;
     margin: 0 auto;
     margin-top: 5%;
-    max-width: 50%;
     margin-bottom: 5%;
+    text-align: center;
+    width: 50%;
 }
+
+.api-graphic-container {
+    display: inline-block;
+    justify-content: start;
+    position: left;
+    margin-left: 5%;
+    width: 20%;
+    height: 5%;
+}
+
+h2 {
+    display: block;
+}
+
+.endpoint-button-container {
+    margin-left: 15%;
+    display: block;
+    height: 150px;
+    width: 100%;
+}
+
+.endpoint-button-container a {
+    text-decoration: none;
+}
+
+td, th {
+    padding: 8px;
+  }
+
+.endpoint-button {
+    width: 200px;
+    height: 100px;
+    border-radius: 18px;
+    background-color: #74AAA2;
+}
+
+    .endpoint-button h4 {
+        padding-top: 20%;
+        color: white;
+        text-align: center;
+    }
+
+    @media (max-width: 768px){
+        .intro {
+            display: block;
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        .api-graphic-container {
+            display: block;
+            position: center;
+            margin-top: 15%;
+        }
+
+        h1 {
+            color: white;
+            top: 250px; 
+            left: 50%;
+            width: 100%;
+            margin-left: 50%;
+        }
+
+        .intro p {
+            top: 5%;
+            position: relative;
+            display: block;
+            left: 250px;
+            margin-bottom: 5%;
+            text-align: center;
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 15%;
+            margin-left: 280px;
+            margin-bottom: 15%;
+        }
+
+        .endpoint-button-container {
+            margin: 0 auto;
+            height: 50%;
+        }
+    }

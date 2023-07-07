@@ -21,3 +21,16 @@
 #footer a:hover { text-decoration: none; }
 
 #footer a:active { text-decoration: none; }
+
+@media (max-width: 768px){
+    #footer {
+        display: block;
+        position: absolute;
+        margin-top: 100%;
+        width: 100%;
+    }
+
+    #footer p {
+        margin-left: 22%;
+    }
+}

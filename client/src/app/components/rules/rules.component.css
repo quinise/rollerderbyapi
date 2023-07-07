@@ -24,17 +24,21 @@ h1 {
 .code-container {
 margin: 0 auto;
 width: 75%;
+background-color: #DEF4EA;
 }
 
 pre.code {
   white-space: pre-wrap;
 }
+
 pre.code::before {
   counter-reset: listing;
 }
+
 pre.code code {
   counter-increment: listing;
 }
+
 pre.code code::before {
   content: counter(listing) ". ";
   display: inline-block;
@@ -42,4 +46,34 @@ pre.code code::before {
   padding-left: auto;
   margin-left: auto;
   text-align: right;
+}
+
+@media (max-width: 768px){
+  h1 {
+    margin-top: 20%;
+    margin-left: 22%;
+    width: 100%;
+    margin-bottom: 5%;
+    justify-content: center;
+ }
+
+ .rules-info p{
+    margin-left: 22%;
+    width: 100%;
+    text-align:  center;
+  }
+
+ .endpoint-container {
+  margin-left: 22%;
+ }
+
+ .endpoint-container p {
+  margin-top: 10%;
+  text-align: center;
+}
+ .code-container {
+  margin-top: 10%;
+  width: 100%;
+  margin-left: 22%;
+  }
 }
