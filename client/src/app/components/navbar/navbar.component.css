@@ -8,6 +8,10 @@
     font-family: 'Montserrat Alternates', sans-serif;
   }
 
+  .mat-icon {
+    color: white;
+  }
+
   mat-toolbar {
     position: fixed;
     left: 0;
