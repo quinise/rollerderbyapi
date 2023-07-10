@@ -8,13 +8,14 @@ import { RulesComponent } from './components/rules/rules.component';
 import { StructureComponent } from './components/structure/structure.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { OfficialsComponent } from './components/officials/officials.component';
+import { OfficialsComponent } from './components/officialTypes/officials.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { StructureService } from './services/structure.service';
-import { OfficialsService } from './services/officials.service';
+import { OfficialTypeService } from './services/official-type.service';
+import { OfficialService } from './services/official.service';
 import { RulesService } from './services/rules.service';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,7 +24,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OfficialInstancesComponent } from './components/official-instances/official-instances.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    OfficialsComponent
+    OfficialsComponent,
+    OfficialInstancesComponent
   ],
   imports: [
     BrowserModule,
@@ -47,10 +51,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTableModule,
     BrowserAnimationsModule,
     CommonModule
   ],
-  providers: [StructureService, OfficialsService, RulesService],
+  providers: [StructureService, OfficialTypeService, RulesService, OfficialService],
   bootstrap: [AppComponent]
 })
 

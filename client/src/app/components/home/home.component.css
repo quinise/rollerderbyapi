@@ -45,33 +45,21 @@ h2 {
 }
 
 .endpoint-button-container {
-    margin-left: 15%;
+    margin-left: 20%;
+    margin-top: 3%;
     display: block;
     height: 150px;
     width: 100%;
 }
 
-.endpoint-button-container a {
-    text-decoration: none;
-}
-
-td, th {
-    padding: 8px;
-  }
-
 .endpoint-button {
     width: 200px;
     height: 100px;
+    margin-right: 2%;
     border-radius: 18px;
+    color: white;
     background-color: #74AAA2;
 }
-
-    .endpoint-button h4 {
-        padding-top: 20%;
-        color: white;
-        font-family: 'Lora', serif;
-        text-align: center;
-    }
 
     @media (max-width: 768px){
         .intro {
@@ -111,7 +99,11 @@ td, th {
         }
 
         .endpoint-button-container {
-            margin: 0 auto;
+            margin-left: 80%;
             height: 50%;
+        }
+
+        .endpoint-button {
+            margin-bottom: 5%;
         }
     }

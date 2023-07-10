@@ -1,0 +1,72 @@
+<h1>Official Types Endpoint</h1>
+<div class="officials-info">
+  <p>The Official Types endpoint provides information about the types, roles, counts of roller derby officials.</p>
+</div>
+<div class="endpoint-container row">
+  <p>http://localhost:3000/api/officials</p>
+</div>
+<div class="code-container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active border border-light border-bottom-0" aria-current="page" href="#"><span class="tab-text">JSON</span></a>
+    </li>
+  </ul>
+  <div class="code-sample" *ngFor="let officialType of officialTypes">
+    <pre class="code">
+      <code>{{ '{' }}</code>
+      <code>  _id:   {{ officialType._id }},</code>
+      <code>  officials: {{'{' }}</code>
+      <code>       types: {{ officialType.types }},</code>
+      <code>       program_certifications: {{ '{' }}</code>
+      <code>              Level_1: {{ officialType.program_certifications.Level_1 }},</code>
+      <code>              Level_2: {{ officialType.program_certifications.Level_2 }},</code>
+      <code>              Level_3: {{ officialType.program_certifications.Level_3 }}</code>
+      <code>{{'       },' }}</code>
+      <code>       referees: {{ '{' }}</code>
+      <code>          head_referee: {{ '{' }}</code>
+      <code>            amount: {{ officialType.referees.head_referee.amount }},</code>
+      <code>            role: {{ officialType.referees.head_referee.role }}</code>
+      <code>{{'          },' }}</code>
+      <code>          pack_referee: {{ '{' }}</code>
+      <code>            amount: {{ officialType.referees.pack_referee.amount }},</code>
+      <code>            role: {{ officialType.referees.pack_referee.role }}</code>
+      <code>{{'          },' }}</code>
+      <code>          jammer_referee: {{ '{' }}</code>
+      <code>            amount: {{ officialType.referees.jammer_referee.amount }},</code>
+      <code>            role: {{ officialType.referees.jammer_referee.role }}</code>
+      <code>{{'          },' }}</code>
+      <code>{{'     },' }}</code>
+      <code>      non_skating_officials: {{'{' }}</code>
+      <code>            scorekeepers: {{'{' }}</code>
+      <code>                amount: {{officialType.non_skating_officials.scorekeepers.amount}},</code>
+      <code>                role: {{officialType.non_skating_officials.scorekeepers.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            scoreboard_operator: {{'{' }}</code>
+      <code>                amount: {{officialType.non_skating_officials.scoreboard_operator.amount}},</code>
+      <code>                role: {{officialType.non_skating_officials.scoreboard_operator.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            penalty_box_manager: {{ '{' }}</code>
+      <code>                amount: {{officialType.non_skating_officials.penalty_box_manager.amount}},</code>
+      <code>                role: {{officialType.non_skating_officials.penalty_box_manager.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            penalty_box_timer: {{ '{' }}</code>
+      <code>                amount: {{officialType.non_skating_officials.penalty_box_timer.amount}}</code>
+      <code>                role: {{officialType.non_skating_officials.penalty_box_timer.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            penalty_trackers: {{ '{' }}</code>
+      <code>                amount: {{officialType.non_skating_officials.penalty_trackers.amount}},</code>
+      <code>                role: {{officialType.non_skating_officials.penalty_trackers.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            jam_timer: {{ '{' }}</code>
+      <code>                amount: {{officialType.non_skating_officials.jam_timer.amount}},</code>
+      <code>                role: {{officialType.non_skating_officials.jam_timer.role}}</code>
+      <code>{{'             },' }}</code>
+      <code>            lineup_tracker: {{ '{' }}</code>
+      <code>                amount: {{officialType.non_skating_officials.lineup_tracker.amount}},</code>
+      <code>                role: {{officialType.non_skating_officials.lineup_tracker.role}}</code>
+      <code>{{'             }' }}</code>
+      <code>{{'      }' }}</code>
+      <code>{{'}' }}</code>
+    </pre>
+  </div>
+</div>

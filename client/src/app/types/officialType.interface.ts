@@ -1,4 +1,4 @@
-export interface OfficialsInterface {
+export interface OfficialTypeInterface {
     _id: string,
     types: string[],
     program_certifications: {

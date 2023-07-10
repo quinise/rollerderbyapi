@@ -4,28 +4,13 @@
       <img src="/assets/api-graphic.png" alt="TODO">
     </div>
     <h1>Roller Derby API <br><br> Documentation</h1>
-    <p>The Roller Derby API is organized around REST. It hase three endpoints: the Structure endpoint, Officials endpoint, and the Rules endpoint</p>
+    <p>The Roller Derby API is organized around REST. It hase four endpoints: the Structure endpoint, Official Types endpoint, Rules endpoint, and the Officials endpoint.</p>
   </div>
   <h2>Endpoints</h2>
   <div class="endpoint-button-container">
-      <table>
-        <tr>
-          <td>
-            <a href="/docs/structure"><div class="endpoint-button">
-              <h4>Structure</h4>
-            </div></a>
-          </td>
-          <td>
-            <a href="/docs/officials"><div class="endpoint-button">
-              <h4>Officials</h4>
-            </div></a>
-          </td>
-          <td>
-            <a href="/docs/rules"><div class="endpoint-button">
-              <h4>Rules</h4>
-            </div></a>
-          </td>
-        </tr>
-      </table>
+    <button color="success" routerLink="/docs/structure" class="endpoint-button" mat-button>Structure</button>
+    <button routerLink="/docs/officialTypes" class="endpoint-button" mat-button>Official Types</button>
+    <button routerLink="/docs/rules" class="endpoint-button" mat-button>Rules</button>
+    <button routerLink="/docs/officials" class="endpoint-button" mat-button>Officials</button>
   </div>
 </div>
