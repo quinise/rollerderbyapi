@@ -40,7 +40,7 @@ app.get("/api/rules", async (req, res) => {
         console.log("Error: " +  err);
     } finally {
         await client.close();
-        console.log("Disconnected (from database) successfully to server");
+        // console.log("Disconnected (from database) successfully to server");
     }
 });
 
@@ -57,13 +57,12 @@ app.get("/api/structure", async (req, res) => {
         console.log("Error: " +  err);
     } finally {
         await client.close();
-        console.log("Disconnected (from database) successfully to server");
+        // console.log("Disconnected (from database) successfully to server");
     }
 
     return res.json({ data: result })
 });
 
-// TODO input from angular to search in structure endpoint
 app.get("/api/officials", async (req, res) => {
     let result = null;
     try {
@@ -75,11 +74,10 @@ app.get("/api/officials", async (req, res) => {
         result = await client.db("derbyApi_db").collection("officials").find({"program_certifications.Level_1" : "Other/Regulation Play"}).toArray();
         res.json({ data: result });
     } catch(err) {
-        // angular route 404
         console.log("Error: " +  err);
     } finally {
         await client.close();
-        console.log("Disconnected (from database) successfully to server");
+        // console.log("Disconnected (from database) successfully to server");
     }
 });
 
