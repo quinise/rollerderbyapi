@@ -5,3 +5,8 @@ h1 {
     font-size: 40px;
     font-family: 'Montserrat Alternates', sans-serif;
 }
+
+.mat-table {
+    margin: 0 auto;
+    width: 50%;
+}

@@ -57,8 +57,13 @@ h2 {
     height: 100px;
     margin-right: 2%;
     border-radius: 18px;
-    color: white;
+    font-family: 'Lora', serif;
     background-color: #74AAA2;
+}
+
+.endpoint-button p {
+    margin: 0 auto;
+    color: white;
 }
 
     @media (max-width: 768px){

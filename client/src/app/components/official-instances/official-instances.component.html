@@ -1,30 +1,32 @@
 <h1>Officials Endpoint</h1>
-<table mat-table [dataSource]="officials" class="official-table mat-elevation-z8">
+<div class="mat-table">
+    <table mat-table [dataSource]="officials" class="official-table mat-elevation-z8">
 
-    <!-- First Name Column -->
-    <ng-container matColumnDef="firstName">
-        <th mat-header-cell *matHeaderCellDef> First Name </th>
-        <td mat-cell *matCellDef="let official"> {{official.firstName}} </td>
-    </ng-container>
-
-    <!-- Last Name Column -->
-    <ng-container matColumnDef="lastName">
-        <th mat-header-cell *matHeaderCellDef> Last Name </th>
-        <td mat-cell *matCellDef="let official"> {{official.lastName}} </td>
-    </ng-container>
-
-    <!-- Level Column -->
-    <ng-container matColumnDef="level">
-        <th mat-header-cell *matHeaderCellDef> Level </th>
-        <td mat-cell *matCellDef="let official"> {{official.level}} </td>
-    </ng-container>
-
-    <!-- Experience Column -->
-    <ng-container matColumnDef="experience">
-        <th mat-header-cell *matHeaderCellDef> Experience </th>
-        <td mat-cell *matCellDef="let official"> {{official.startDate}} years </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+        <!-- First Name Column -->
+        <ng-container matColumnDef="firstName">
+            <th mat-header-cell *matHeaderCellDef> <b>First Name</b> </th>
+            <td mat-cell *matCellDef="let official"> {{official.firstName}} </td>
+        </ng-container>
+    
+        <!-- Last Name Column -->
+        <ng-container matColumnDef="lastName">
+            <th mat-header-cell *matHeaderCellDef> <b>Last Name</b> </th>
+            <td mat-cell *matCellDef="let official"> {{official.lastName}} </td>
+        </ng-container>
+    
+        <!-- Level Column -->
+        <ng-container matColumnDef="level">
+            <th mat-header-cell *matHeaderCellDef> <b>Level</b> </th>
+            <td mat-cell *matCellDef="let official"> {{official.level}} </td>
+        </ng-container>
+    
+        <!-- Experience Column -->
+        <ng-container matColumnDef="experience">
+            <th mat-header-cell *matHeaderCellDef> <b>Experience</b> </th>
+            <td mat-cell *matCellDef="let official"> {{ official.startDate }} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>    
+</div>

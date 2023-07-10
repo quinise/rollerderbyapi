@@ -8,7 +8,9 @@ import { Official } from 'src/app/types/officials';
   templateUrl: './official-instances.component.html',
   styleUrls: ['./official-instances.component.css']
 })
+
 export class OfficialInstancesComponent implements OnInit {
+  today: number = Date.now();
   displayedColumns: string[] = ['firstName', 'lastName', 'level', 'experience']
   officials: Official[];
 
