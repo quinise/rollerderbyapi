@@ -1,7 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StructureInterface } from '../types/structure.interface';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
+interface StructureData { 
+  data: StructureInterface[];
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -10,21 +15,7 @@ export class StructureService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getStructureData() {
-    let structures: StructureInterface[] = [];
-
-    this.httpClient.get(this.rootURL + '/structure')
-      .subscribe((response: any) => {
-        structures = response.data.map((data: any) => {
-          let structure: StructureInterface = {
-            _id: data._id,
-            modern_banked_track: data.modern_banked_track,
-            flat_track: data.flat_track
-          };
-
-          structures.push(structure);
-        })
-      });
-      return structures;
+  getStructures(): Observable<StructureInterface[]> {
+    return this.httpClient.get(this.rootURL + '/structure').pipe(map((response) => (response as StructureData).data as StructureInterface[]));
   }
 }

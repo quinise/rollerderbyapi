@@ -12,11 +12,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   styleUrls: ['./structure.component.css']
 })
 export class StructureComponent implements OnInit {
-  structures: StructureInterface[] = [];
+  structures: StructureInterface[];
 
   constructor(private http: HttpClient, private structureService: StructureService) {}  
 
   ngOnInit(): void {
-    this.structures = this.structureService.getStructureData();
+    this.structureService.getStructures().subscribe(data => this.structures = data);
   }
 }
