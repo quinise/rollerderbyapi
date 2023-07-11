@@ -25,6 +25,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OfficialInstancesComponent } from './components/official-instances/official-instances.component';
 
@@ -52,6 +54,8 @@ import { OfficialInstancesComponent } from './components/official-instances/offi
     MatIconModule,
     MatListModule,
     MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
     BrowserAnimationsModule,
     CommonModule
   ],

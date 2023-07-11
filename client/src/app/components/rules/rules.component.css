@@ -14,6 +14,13 @@ h1 {
     font-family: 'Lora', serif;
   }
 
+  .first-divider {
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 75%;
+    color: #2E413D;
+  }
+
 .endpoint-container {
     margin: 0 auto;
     margin-top: 5%;
