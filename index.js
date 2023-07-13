@@ -20,6 +20,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/")));
 app.set('view engine', 'ejs');
 
+// async function init() {
+//     await client.db("derbyApi_db").collection("officialInstances").createIndex(
+//         {
+//           firstName: "text",
+//           lastName: "text"
+//         }
+//       );
+// }
+
+// init();
+
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin,  X-Requested-With, Content-Type, Accept');
@@ -29,13 +40,26 @@ app.use((req, res, next) => {
 
 app.get("/api/officials", async (req, res) => {
     let result = null;
+    const criteria = req.query.criteria;
+    console.log(criteria);
+
     try {
         await client.connect();
 
         // Establish and verify connection
         await client.db("admin").command({ ping: 1 });
+        // let find = {};
+        // if (criteria) {
+        //     find =  { $text: { $search: criteria } };
+        // }
 
         result = await client.db("derbyApi_db").collection("officialInstances").find({}).toArray();
+        if (criteria) {
+            result = result.filter(official => {
+                return (official.firstName.includes(criteria) || official.lastName.includes(criteria))
+            });
+        }
+        
         res.json({"data": result});
     } catch(err) {
         console.log("Error: " +  err);

@@ -16,7 +16,12 @@ export class OfficialService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getOfficials(): Observable<Official[]> {
-    return this.httpClient.get(this.rootURL + '/officials').pipe(map((response) => (response as OfficialData).data as Official[]));
+  getOfficials(filterString: string): Observable<Official[]> {
+    let url = this.rootURL + '/officials';
+    if (filterString !== "") {
+      url += "/?criteria=" + encodeURIComponent(filterString);
+    }
+
+    return this.httpClient.get(url).pipe(map((response) => (response as OfficialData).data as Official[]));
   }
 }

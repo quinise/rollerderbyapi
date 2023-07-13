@@ -6,6 +6,11 @@ h1 {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
+.officials-intro p {
+    text-align: center;
+    font-family: 'Lora', serif;
+}
+
 .first-divider {
     margin: 0 auto;
     margin-top: 5%;
@@ -14,6 +19,27 @@ h1 {
     color: #2E413D;
   }
 
+  .structure-query-form {
+    margin: 0 auto;
+    margin-bottom: 5%;
+    height: 275px;
+    width: 50%;
+    border: 5px solid #2E413D;
+  }
+
+  h2 {
+    margin: 5%;
+    display: block;
+    color:#DEF4EA;
+    font-size: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+
+  .input-collection {
+    margin-top: 5%;
+    margin-left: 35%;
+  }
+  
 .mat-table {
     margin: 0 auto;
     width: 50%;

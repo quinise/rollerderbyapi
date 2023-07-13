@@ -45,33 +45,6 @@ h2 {
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.input-collection {
-  margin-top: 5%;
-  margin-left: 35%;
-}
-
-.submit-button { 
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 15%;
-  border-radius: 12px;
-  font-family: 'Lora', serif;
-  background-color: #74AAA2; 
-  
-}
-
-.submit-button p {
-  color: white;
-  margin-top: 12%;
-}
-
-.second-divider {
-  margin: 0 auto;
-  margin-top: 5%;
-  width: 75%;
-  color: #2E413D;
-}
-
 .endpoint-container {
   margin: 0 auto;
   margin-top: 5%;
