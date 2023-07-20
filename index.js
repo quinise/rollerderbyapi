@@ -1,17 +1,10 @@
 require('dotenv').config();
-const mongoose = require('mongoose');
 const cors = require('cors');
 const express = require("express");
 const bodyParser = require('body-parser');
 const path = require("path")
 const port = process.env.PORT !== undefined ? parseInt(process.env.PORT) : 3000;
-const dbPW = process.env.DB_PASSWORD;
-const dbUser = process.env.DB_USER;
-const uri = `mongodb+srv://${dbUser}:${dbPW}@derby-api-cluster.6nrongd.mongodb.net/?retryWrites=true&w=majority`;
 const app = express();
-const { MongoClient } = require('mongodb');
-// const { async } = require('rxjs');
-const client = new MongoClient(uri);
 const { db } = require('./firebase.js')
 app.use(cors());
 app.use(express.json());
@@ -38,20 +31,19 @@ app.get("/api/officials", async (req, res) => {
 
     let docs = [];
     snapshot.forEach(doc => {
-        console.log("date and time ", doc.startDate)
-
         docs.push(doc.data());
     });
+    
+    const criteria = req.query.criteria;
+    if (criteria) {
+        docs = docs.filter(official => {
+          return (official.firstName.includes(criteria) || official.lastName.includes(criteria));
+        });
+    }
 
     res.status(200).send(docs);
     
-    // TODO
-    // const criteria = req.query.criteria;
-    // if (criteria) {
-    //     result = result.filter(official => {
-    //         return (official.firstName.includes(criteria) || official.lastName.includes(criteria))
-    //     });
-    // }
+    
 })
 
 app.get("/api/rules", async (req, res) => {
@@ -93,10 +85,11 @@ app.use((req, res, next) => {
 
 const start = async() => {
     try{
-        await mongoose.connect(uri);
 
         app.listen(port, () => console.log(`Roller Derby API server is running on port ${port}...`));
+    
     } catch (err) {
+
         console.log(err.message)
     }
     
