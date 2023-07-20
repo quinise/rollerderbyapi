@@ -1,5 +1,4 @@
 export interface RulesInterface {
-    _id: string;
     description: string,
     game_parameters_and_safety: {
         timing: {

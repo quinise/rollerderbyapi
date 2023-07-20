@@ -1,5 +1,4 @@
 export interface StructureInterface {
-    _id:string,
    modern_banked_track: {
         governing_body: string,
         governing_body_inception: number,

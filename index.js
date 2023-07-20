@@ -28,30 +28,30 @@ app.use((req, res, next) => {
 })
 
 app.get("/api/officials", async (req, res) => {
-    let result = null;
-    const criteria = req.query.criteria;
+    const officialsRef = db.collection('OfficialInstances');
+    const snapshot = await officialsRef.get();
 
-    try {
-        await client.connect();
-
-        // Establish and verify connection
-        await client.db("admin").command({ ping: 1 });
-        
-
-        result = await client.db("derbyApi_db").collection("officialInstances").find({}).toArray();
-        if (criteria) {
-            result = result.filter(official => {
-                return (official.firstName.includes(criteria) || official.lastName.includes(criteria))
-            });
-        }
-        
-        res.json({"data": result});
-    } catch(err) {
-        console.log("Error: " +  err);
-    } finally {
-        await client.close();
-        // console.log("Disconnected (from database) successfully to server");
+    if (snapshot.empty) {
+        console.log('No matching documents');
+        return;
     }
+
+    let docs = [];
+    snapshot.forEach(doc => {
+        console.log("date and time ", doc.startDate)
+
+        docs.push(doc.data());
+    });
+
+    res.status(200).send(docs);
+    
+    // TODO
+    // const criteria = req.query.criteria;
+    // if (criteria) {
+    //     result = result.filter(official => {
+    //         return (official.firstName.includes(criteria) || official.lastName.includes(criteria))
+    //     });
+    // }
 })
 
 app.get("/api/rules", async (req, res) => {

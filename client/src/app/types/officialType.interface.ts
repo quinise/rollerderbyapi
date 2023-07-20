@@ -1,5 +1,4 @@
 export interface OfficialTypeInterface {
-    _id: string,
     types: string[],
     program_certifications: {
         Level_1: string,

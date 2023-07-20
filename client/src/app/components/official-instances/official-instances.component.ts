@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { OfficialService } from 'src/app/services/official.service';
 import { Official } from 'src/app/types/officials';
@@ -9,21 +10,18 @@ import { Official } from 'src/app/types/officials';
 })
 
 export class OfficialInstancesComponent implements OnInit {
-  displayedColumns: string[] = ['firstName', 'lastName', 'level', 'experience']
-  officials: Official[];
+  displayedColumns: string[] = ['firstName', 'lastName', 'level', 'experience'];
+  officials: Official[] = [];
   searchValue = "";
 
-  constructor(private officialService: OfficialService) {}  
+  constructor(private http: HttpClient, private officialService: OfficialService) {}  
   
   ngOnInit(): void {
     this.search();
   }
 
-  formatAsYears(dateString: string): number {
-    const diffMs = Date.now() - new Date(dateString).getTime();
-    const diffDate = new Date(diffMs);
-    
-    return diffDate.getUTCFullYear() - 1970;
+  formatAsYears(dateString: number): number {
+    return new Date(dateString * 1000).getFullYear();
   }
 
   search() {

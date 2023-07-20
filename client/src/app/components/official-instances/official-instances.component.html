@@ -37,8 +37,8 @@
     
         <!-- Experience Column -->
         <ng-container matColumnDef="experience">
-            <th mat-header-cell *matHeaderCellDef> <b>Experience</b> </th>
-            <td mat-cell *matCellDef="let official"> {{ formatAsYears(official.startDate) }} </td>
+            <th mat-header-cell *matHeaderCellDef> <b>Experience</b> </th> 
+            <td mat-cell *matCellDef="let official"> {{ formatAsYears(official.startDate._seconds) }} </td>
         </ng-container>
     
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
