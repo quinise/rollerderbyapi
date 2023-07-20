@@ -9,11 +9,11 @@ import { RulesService } from 'src/app/services/rules.service';
   styleUrls: ['./rules.component.css']
 })
 export class RulesComponent implements OnInit {
-  rules: RulesInterface[];
+  rules: RulesInterface[] = [];
 
   constructor(private http: HttpClient, private rulesService: RulesService) {}  
   
   ngOnInit(): void {
-    this.rulesService.getRules().subscribe(data => this.rules = data);
+    this.rulesService.getRules().subscribe(data => this.rules.push(data));
   }
 }

@@ -57,10 +57,7 @@ export interface RulesInterface {
         game_structure_penalties: {
             definition: string,
             illegal_positioning: string,
-            gaining_position: {
-                definition: string,
-                return_to_action: string
-            },
+            gaining_position: string,
             interfering_with_game: string,
             other_illegal_procedures: string
         },

@@ -16,7 +16,6 @@
       <div class="code-sample" *ngFor="let ruleset of rules">
         <pre class="code">
           <code>{{ '{' }}</code>
-          <code>  _id:   {{ ruleset._id }},</code>
           <code>  description:   {{ ruleset.description }},</code>
           <code>  game_parameters_and_safety: {{ '{' }} </code>
           <code>      timing: {{ '{' }}</code>
@@ -73,10 +72,7 @@
           <code>      game_structure_penalties: {{ '{' }} </code>
           <code>          definition: {{ ruleset.penalties.game_structure_penalties.definition }},</code>
           <code>          illegal_positioning: {{ ruleset.penalties.game_structure_penalties.illegal_positioning }},</code>
-          <code>          gaining_position: {{ '{' }}</code>
-          <code>              definition: {{ ruleset.penalties.game_structure_penalties.gaining_position.definition }},</code>
-          <code>              return_to_action: {{ ruleset.penalties.game_structure_penalties.gaining_position.return_to_action }}</code>
-          <code>{{'          },' }}</code>
+          <code>          gaining_position: {{ ruleset.penalties.game_structure_penalties.gaining_position }}</code>
           <code>          interfering_with_game: {{ ruleset.penalties.game_structure_penalties.interfering_with_game }},</code>
           <code>          other_illegal_procedures: {{ ruleset.penalties.game_structure_penalties.other_illegal_procedures }}</code>
           <code>{{'   },' }}</code>
@@ -84,7 +80,7 @@
           <code>      enforcing_penalties: {{ '{' }} </code>
           <code>          definition: {{ ruleset.penalties.enforcing_penalties.definition }},</code>
           <code>          penalty_enforcement_blocker: {{ '{' }} </code>
-          <code>              definition: {{ ruleset.penalties.enforcing_penalties.penalty_enforcement_blocker }},</code>
+          <code>              definition: {{ ruleset.penalties.enforcing_penalties.penalty_enforcement_blocker.definition }},</code>
           <code>              seat_unavailable: {{ ruleset.penalties.enforcing_penalties.penalty_enforcement_blocker.seat_unavailable }}</code>
           <code>{{'       },' }}</code>
           <code>          penalty_enforcement_jammer: {{ ruleset.penalties.enforcing_penalties.penalty_enforcement_jammer }},</code>

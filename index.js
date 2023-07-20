@@ -10,26 +10,15 @@ const dbUser = process.env.DB_USER;
 const uri = `mongodb+srv://${dbUser}:${dbPW}@derby-api-cluster.6nrongd.mongodb.net/?retryWrites=true&w=majority`;
 const app = express();
 const { MongoClient } = require('mongodb');
-const { async } = require('rxjs');
+// const { async } = require('rxjs');
 const client = new MongoClient(uri);
-
+const { db } = require('./firebase.js')
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(express.static(path.join(__dirname, "/")));
 app.set('view engine', 'ejs');
-
-// async function init() {
-//     await client.db("derbyApi_db").collection("officialInstances").createIndex(
-//         {
-//           firstName: "text",
-//           lastName: "text"
-//         }
-//       );
-// }
-
-// init();
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -48,10 +37,7 @@ app.get("/api/officials", async (req, res) => {
 
         // Establish and verify connection
         await client.db("admin").command({ ping: 1 });
-        // let find = {};
-        // if (criteria) {
-        //     find =  { $text: { $search: criteria } };
-        // }
+        
 
         result = await client.db("derbyApi_db").collection("officialInstances").find({}).toArray();
         if (criteria) {
@@ -70,21 +56,29 @@ app.get("/api/officials", async (req, res) => {
 })
 
 app.get("/api/rules", async (req, res) => {
-    let result = null;
-    try {
-        await client.connect();
-
-        // Establish and verify connection
-        await client.db("admin").command({ ping: 1 });
-
-        result = await client.db("derbyApi_db").collection("rules").find({}).toArray();
-        res.json({"data": result});
-    } catch(err) {
-        console.log("Error: " +  err);
-    } finally {
-        await client.close();
-        // console.log("Disconnected (from database) successfully to server");
+    const rulesRef = db.collection('rules').doc('eFgAZAFIzr8mdkmVRxZt');
+    const doc = await rulesRef.get();    // let result = null;
+    
+    if (!doc.exists) {
+        return res.sendStatus(400);
     }
+
+    res.status(200).send(doc.data());
+    
+    // try {
+    //     await client.connect();
+
+    //     // Establish and verify connection
+    //     await client.db("admin").command({ ping: 1 });
+
+    //     result = await client.db("derbyApi_db").collection("rules").find({}).toArray();
+    //     res.json({"data": result});
+    // } catch(err) {
+    //     console.log("Error: " +  err);
+    // } finally {
+    //     await client.close();
+    //     // console.log("Disconnected (from database) successfully to server");
+    // }
 });
 
 app.get("/api/structure", async (req, res) => {
