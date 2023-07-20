@@ -57,47 +57,24 @@ app.get("/api/officials", async (req, res) => {
 
 app.get("/api/rules", async (req, res) => {
     const rulesRef = db.collection('rules').doc('eFgAZAFIzr8mdkmVRxZt');
-    const doc = await rulesRef.get();    // let result = null;
+    const doc = await rulesRef.get();
     
     if (!doc.exists) {
         return res.sendStatus(400);
     }
 
     res.status(200).send(doc.data());
-    
-    // try {
-    //     await client.connect();
-
-    //     // Establish and verify connection
-    //     await client.db("admin").command({ ping: 1 });
-
-    //     result = await client.db("derbyApi_db").collection("rules").find({}).toArray();
-    //     res.json({"data": result});
-    // } catch(err) {
-    //     console.log("Error: " +  err);
-    // } finally {
-    //     await client.close();
-    //     // console.log("Disconnected (from database) successfully to server");
-    // }
 });
 
 app.get("/api/structure", async (req, res) => {
-    let result = null;
-    try {
-        await client.connect();
-
-        // Establish and verify connection
-        await client.db("admin").command({ ping: 1 });
-
-        result = await client.db("derbyApi_db").collection("structure").find({}).toArray();
-    } catch(err) {
-        console.log("Error: " +  err);
-    } finally {
-        await client.close();
-        // console.log("Disconnected (from database) successfully to server");
+    const structureRef = db.collection('structure').doc('bR9o2x7D1TfVQUFOOKI8');
+    const doc = await structureRef.get();
+    
+    if (!doc.exists) {
+        return res.sendStatus(400);
     }
 
-    return res.json({ data: result })
+    res.status(200).send(doc.data());
 });
 
 app.get("/api/officialTypes", async (req, res) => {
