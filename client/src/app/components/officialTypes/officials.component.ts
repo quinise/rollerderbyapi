@@ -14,6 +14,6 @@ export class OfficialsComponent implements OnInit {
   constructor(private http: HttpClient, private officialTypesService: OfficialTypeService) {}  
 
   ngOnInit(): void {
-    this.officialTypesService.getOfficialTypes().subscribe(data => this.officialTypes = data);
+    this.officialTypesService.getOfficialTypes().subscribe(data => this.officialTypes.push(data));
   }
 }

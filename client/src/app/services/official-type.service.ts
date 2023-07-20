@@ -4,10 +4,6 @@ import { OfficialTypeInterface } from '../types/officialType.interface'
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-interface OfficialTypesData { 
-  data: OfficialTypeInterface[];
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +12,7 @@ export class OfficialTypeService {
 
   constructor(private httpClient: HttpClient) { }
   
-  getOfficialTypes(): Observable<OfficialTypeInterface[]> {
-    return this.httpClient.get(this.rootURL + '/officialTypes').pipe(map((response) => (response as OfficialTypesData).data as OfficialTypeInterface[]));
+  getOfficialTypes(): Observable<OfficialTypeInterface> {
+    return this.httpClient.get(this.rootURL + '/officialTypes').pipe(map((response) => response as OfficialTypeInterface));
   }
 }

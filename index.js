@@ -30,7 +30,6 @@ app.use((req, res, next) => {
 app.get("/api/officials", async (req, res) => {
     let result = null;
     const criteria = req.query.criteria;
-    console.log(criteria);
 
     try {
         await client.connect();
@@ -78,21 +77,14 @@ app.get("/api/structure", async (req, res) => {
 });
 
 app.get("/api/officialTypes", async (req, res) => {
-    let result = null;
-    try {
-        await client.connect();
-
-        // Establish and verify connection
-        await client.db("admin").command({ ping: 1 });
-
-        result = await client.db("derbyApi_db").collection("officials").find({}).toArray();
-        res.json({ data: result });
-    } catch(err) {
-        console.log("Error: " +  err);
-    } finally {
-        await client.close();
-        // console.log("Disconnected (from database) successfully to server");
+    const officialTypesRef = db.collection('officials').doc('9QwCOdURB7BwMFV1NtWN');
+    const doc = await officialTypesRef.get();
+    
+    if (!doc.exists) {
+        return res.sendStatus(400);
     }
+
+    res.status(200).send(doc.data());
 });
 
 app.use((req, res, next) => {
