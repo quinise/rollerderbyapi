@@ -8,7 +8,7 @@ This is the repository for the Roller Derby API.
 
 ## Description
 
-A Node.js server connects to a Mongo Database to get responses filled with data from the Structures, Rules, and Officials collections. The documentation for the API is hosted by an Angular client.
+A Node.js server connects to a Firestore Database to get responses filled with data from the Structures, Rules, Official Types, and Officials collections. The documentation for the API is hosted by an Angular client.
 
 ### Executing the program
 
