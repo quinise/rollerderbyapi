@@ -75,6 +75,7 @@ h2 {
 pre.code {
     white-space: pre-wrap;
   }
+  
   pre.code::before {
     counter-reset: listing;
   }
@@ -92,33 +93,33 @@ pre.code {
     text-align: right;  /* now works */
   }
 
-  @media (max-width: 768px){
-    h1 {
-      margin-top: 20%;
-      margin-left: 22%;
-      width: 100%;
-      margin-bottom: 5%;
-      justify-content: center;
-   }
-  
-   .structure-intro p{
-      margin-left: 22%;
-      width: 100%;
-      text-align:  center;
-    }
-  
-   .endpoint-container {
+@media (max-width: 768px){
+  h1 {
+    margin-top: 20%;
     margin-left: 22%;
-   }
-  
-   .endpoint-container p {
-    margin-top: 10%;
-    color: #2E413D;
-    text-align: center;
-  }
-   .code-container {
-    margin-top: 10%;
     width: 100%;
-    margin-left: 22%;
-    }
+    margin-bottom: 5%;
+    justify-content: center;
   }
+
+  .structure-intro p{
+    margin-left: 22%;
+    width: 100%;
+    text-align:  center;
+  }
+
+  .endpoint-container {
+  margin-left: 22%;
+  }
+
+  .endpoint-container p {
+  margin-top: 10%;
+  color: #2E413D;
+  text-align: center;
+}
+  .code-container {
+  margin-top: 10%;
+  width: 100%;
+  margin-left: 22%;
+  }
+}

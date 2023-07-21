@@ -84,17 +84,18 @@ pre.code code::before {
     text-align:  center;
   }
 
- .endpoint-container {
-  margin-left: 22%;
- }
-
- .endpoint-container p {
-  margin-top: 10%;
-  text-align: center;
-}
- .code-container {
-  margin-top: 10%;
-  width: 100%;
-  margin-left: 22%;
+  .endpoint-container {
+    margin-left: 22%;
   }
+
+  .endpoint-container p {
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .code-container {
+    margin-top: 10%;
+    width: 100%;
+    margin-left: 22%;
+    }
 }

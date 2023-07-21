@@ -6,6 +6,8 @@ const path = require("path")
 const port = process.env.PORT !== undefined ? parseInt(process.env.PORT) : 3000;
 const app = express();
 const { db } = require('./firebase.js')
+const functions = require('firebase-functions');
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -42,8 +44,6 @@ app.get("/api/officials", async (req, res) => {
     }
 
     res.status(200).send(docs);
-    
-    
 })
 
 app.get("/api/rules", async (req, res) => {
@@ -83,16 +83,14 @@ app.use((req, res, next) => {
     res.status(404).render('error.ejs')
 })
 
-const start = async() => {
-    try{
+// const start = async() => {
+//     try{
+//         app.listen(port, () => console.log(`Roller Derby API server is running on port ${port}...`));
+//     } catch (err) {
+//         console.log(err.message)
+//     }
+// }
 
-        app.listen(port, () => console.log(`Roller Derby API server is running on port ${port}...`));
-    
-    } catch (err) {
+// start();
 
-        console.log(err.message)
-    }
-    
-}
-
-start();
+exports.app = functions.https.onRequest(app);

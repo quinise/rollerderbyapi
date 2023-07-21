@@ -77,60 +77,60 @@ h2 {
     color: white;
 }
 
-    @media (max-width: 768px){
-        .intro {
-            display: block;
-            width: 100%;
-            margin-top: 5%;
-        }
-
-        .intro p {
-            margin-left: 33%;
-        }
-        .api-graphic-container {
-            display: block;
-            justify-content: start;
-            position: left;
-            width: 2%;
-            position: center;
-            margin-top: 15%;
-        }
-        
-        h1 {
-            display: block;
-            color: white;
-            top: 250px; 
-            left: 33%;
-            width: 100%;
-            margin-left: 50%;
-        }
-
-        .intro p {
-            top: 5%;
-            position: relative;
-            display: block;
-            margin-bottom: 5%;
-            text-align: center;
-            width: 100%;
-        }
-        
-        .first-divider {
-            margin-left: 50%;
-            width: 75%;
-        }
-
-        h2 {
-            margin-left: 33%;
-            margin-top: 15%;
-            margin-bottom: 15%;
-        }
-
-        .endpoint-button-container {
-            margin-left: 33%;
-            height: 150px;
-        }
-
-        .endpoint-button {
-            margin-bottom: 5%;
-        }
+@media (max-width: 768px){
+    .intro {
+        display: block;
+        width: 100%;
+        margin-top: 5%;
     }
+
+    .intro p {
+        margin-left: 33%;
+    }
+    .api-graphic-container {
+        display: block;
+        justify-content: start;
+        position: left;
+        width: 2%;
+        position: center;
+        margin-top: 15%;
+    }
+    
+    h1 {
+        display: block;
+        color: white;
+        top: 250px; 
+        left: 33%;
+        width: 100%;
+        margin-left: 50%;
+    }
+
+    .intro p {
+        top: 5%;
+        position: relative;
+        display: block;
+        margin-bottom: 5%;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .first-divider {
+        margin-left: 50%;
+        width: 75%;
+    }
+
+    h2 {
+        margin-left: 33%;
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+
+    .endpoint-button-container {
+        margin-left: 33%;
+        height: 150px;
+    }
+
+    .endpoint-button {
+        margin-bottom: 5%;
+    }
+}
