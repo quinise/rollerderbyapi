@@ -1,3 +1,4 @@
+// This file defines the custom interface, Official Type
 export interface OfficialTypeInterface {
     types: string[],
     program_certifications: {

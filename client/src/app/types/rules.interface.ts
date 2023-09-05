@@ -1,3 +1,4 @@
+// This file defines the custom interface, Rules 
 export interface RulesInterface {
     description: string,
     game_parameters_and_safety: {

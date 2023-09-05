@@ -1,3 +1,4 @@
+// This file defines the custom interface, Structure. 
 export interface StructureInterface {
    modern_banked_track: {
         governing_body: string,

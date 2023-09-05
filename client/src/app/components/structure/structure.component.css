@@ -22,19 +22,11 @@ h1 {
   color: #2E413D;
 }
 
-.search-paragraph{
+.search-paragraph {
   margin-bottom: 5%;
   text-align: center;
   color: #2E413D;
   font-family: 'Lora', serif;
-}
-
-.structure-query-form {
-  margin: 0 auto;
-  margin-bottom: 5%;
-  height: 275px;
-  width: 50%;
-  border: 5px solid #2E413D;
 }
 
 h2 {
@@ -50,7 +42,7 @@ h2 {
   margin-top: 5%;
   margin-bottom: 5%;
   height: 100px;
-  width: 350px;
+  width: 550px;
   border: solid #2E413D 3px;
 }
 

@@ -1,9 +1,9 @@
-require('dotenv').config();
+// This file contains the code for the site's routing and starting the server
 const cors = require('cors');
 const express = require("express");
 const bodyParser = require('body-parser');
 const path = require("path")
-const port = process.env.PORT !== undefined ? parseInt(process.env.PORT) : 3000;
+// const port = process.env.PORT !== undefined ? parseInt(process.env.PORT) : 3000;
 const app = express();
 const { db } = require('./firebase.js')
 const functions = require('firebase-functions');
@@ -22,7 +22,7 @@ app.use((req, res, next) => {
     next();
 })
 
-app.get("/api/officials", async (req, res) => {
+app.get("/officials", async (req, res) => {
     const officialsRef = db.collection('OfficialInstances');
     const snapshot = await officialsRef.get();
 
@@ -46,7 +46,7 @@ app.get("/api/officials", async (req, res) => {
     res.status(200).send(docs);
 })
 
-app.get("/api/rules", async (req, res) => {
+app.get("/rules", async (req, res) => {
     const rulesRef = db.collection('rules').doc('eFgAZAFIzr8mdkmVRxZt');
     const doc = await rulesRef.get();
     
@@ -57,7 +57,7 @@ app.get("/api/rules", async (req, res) => {
     res.status(200).send(doc.data());
 });
 
-app.get("/api/structure", async (req, res) => {
+app.get("/structure", async (req, res) => {
     const structureRef = db.collection('structure').doc('bR9o2x7D1TfVQUFOOKI8');
     const doc = await structureRef.get();
     
@@ -68,7 +68,7 @@ app.get("/api/structure", async (req, res) => {
     res.status(200).send(doc.data());
 });
 
-app.get("/api/officialTypes", async (req, res) => {
+app.get("/officialTypes", async (req, res) => {
     const officialTypesRef = db.collection('officials').doc('9QwCOdURB7BwMFV1NtWN');
     const doc = await officialTypesRef.get();
     
@@ -83,6 +83,7 @@ app.use((req, res, next) => {
     res.status(404).render('error.ejs')
 })
 
+// This function starts the server
 // const start = async() => {
 //     try{
 //         app.listen(port, () => console.log(`Roller Derby API server is running on port ${port}...`));
@@ -93,4 +94,4 @@ app.use((req, res, next) => {
 
 // start();
 
-exports.app = functions.https.onRequest(app);
+exports.api = functions.https.onRequest(app);
