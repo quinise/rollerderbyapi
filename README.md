@@ -6,7 +6,9 @@
 [![Firebase](https://img.shields.io/badge/hosting-firebase-orange?logo=firebase)]()
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/4064770/235254208-51c0c4c0-1748-43d4-9633-8259c86c7259.png" alt="An array of rollerskating wheels in the shape of a skate" width="520"/>
+  <img src="https://user-images.githubusercontent.com/4064770/235254208-51c0c4c0-1748-43d4-9633-8259c86c7259.png"
+       alt="An array of rollerskating wheels in the shape of a skate"
+       width="320" />
 </p>
 
 ## Description
