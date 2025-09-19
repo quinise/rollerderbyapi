@@ -1,9 +1,9 @@
 # Roller Derby API
 
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen?logo=node.js)]()
-[![Angular](https://img.shields.io/badge/angular-client-red?logo=angular)]()
-[![Firebase](https://img.shields.io/badge/hosting-firebase-orange?logo=firebase)]()
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen?logo=node.js)](https://nodejs.org/)  
+[![Angular](https://img.shields.io/badge/angular-client-red?logo=angular)](https://angular.dev/)  
+[![Firebase](https://img.shields.io/badge/hosting-firebase-orange?logo=firebase)](https://firebase.google.com/docs/hosting)  
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/4064770/235254208-51c0c4c0-1748-43d4-9633-8259c86c7259.png"
